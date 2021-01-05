@@ -130,7 +130,6 @@ header {
         align-items: center;
 
         li {
-          color: #ffffff;
           font-family: Montserrat;
           font-size: 14px;
           font-weight: 300;
@@ -138,11 +137,15 @@ header {
           letter-spacing: normal;
           line-height: normal;
           text-align: center;
-          transition: color 180ms;
 
-          &:hover {
-            color: $aqua;
+          a {
+            color: #ffffff;
             transition: color 180ms;
+
+            &:hover {
+              color: $aqua;
+              transition: color 180ms;
+            }
           }
 
           & + li {
@@ -240,6 +243,7 @@ header {
     width: 114px;
     height: 34px;
     border-radius: 17px;
+    line-height: normal;
   }
 }
 

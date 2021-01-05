@@ -734,7 +734,6 @@ header .container nav ul {
 }
 
 header .container nav ul li {
-  color: #ffffff;
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 300;
@@ -742,10 +741,14 @@ header .container nav ul li {
   letter-spacing: normal;
   line-height: normal;
   text-align: center;
+}
+
+header .container nav ul li a {
+  color: #ffffff;
   transition: color 180ms;
 }
 
-header .container nav ul li:hover {
+header .container nav ul li a:hover {
   color: #00ffd8;
   transition: color 180ms;
 }
@@ -841,6 +844,7 @@ header .container .get_in_touch {
   width: 114px;
   height: 34px;
   border-radius: 17px;
+  line-height: normal;
 }
 
 .right_social_block {
