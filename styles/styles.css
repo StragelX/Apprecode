@@ -617,6 +617,13 @@ h1 {
   text-align: left;
 }
 
+@media all and (max-width: 760px) {
+  h1 {
+    font-size: 34px;
+    line-height: 45px;
+  }
+}
+
 h1 span {
   color: #00ffd8;
   font-style: normal;
@@ -636,6 +643,13 @@ h2 {
   font-style: normal;
   letter-spacing: normal;
   line-height: normal;
+}
+
+@media all and (max-width: 760px) {
+  h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .container {
@@ -1840,15 +1854,12 @@ footer a:hover {
   height: 30px;
   border-radius: 23px;
   line-height: 28px;
+  margin-right: 20px;
 }
 
 .blog_page_wrap .categories_wrap .categorie.active {
   background-color: #00ffd8;
   color: #070b12;
-}
-
-.blog_page_wrap .categories_wrap .categorie + .categorie {
-  margin-left: 20px;
 }
 
 .read_also h1 {

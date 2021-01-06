@@ -34,4 +34,9 @@ $( document ).ready(function() {
       $(this).closest(".modal_overlay").addClass("hidden");
       $("body").removeClass("show_modal");
     })
+
+    $('.categorie').click(function(){
+      $(this).addClass('active').siblings('.categorie').removeClass('active');
+      
+    })
 });
