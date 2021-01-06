@@ -781,8 +781,16 @@ header .container .get_in_touch {
   height: 110vh;
 }
 
-.bg .layer {
-  background: url("../img/top_bg.png") no-repeat center/cover;
+.bg .layer1 {
+  background: url("../img/top_bg_big.png") no-repeat center/cover;
+}
+
+.bg .layer2 {
+  background: url("../img/top_bg_mid.png") no-repeat center/cover;
+}
+
+.bg .layer3 {
+  background: url("../img/top_bg_sml.png") no-repeat center/cover;
 }
 
 .bg img {

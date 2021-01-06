@@ -181,8 +181,16 @@ header {
     height: 110vh;
   }
 
-  .layer {
-    background: url("../img/top_bg.png") no-repeat center / cover;
+  .layer1 {
+    background: url("../img/top_bg_big.png") no-repeat center / cover;
+  }
+
+  .layer2 {
+    background: url("../img/top_bg_mid.png") no-repeat center / cover;
+  }
+
+  .layer3 {
+    background: url("../img/top_bg_sml.png") no-repeat center / cover;
   }
 
   img {
