@@ -1,0 +1,11 @@
+﻿
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square70x70logo src=“Apprecode_fav-icons_76x76.png”/>
+      <square150x150logo src="Apprecode_fav-icons_228x228.png"/>
+	<TileColor>#fff</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>
