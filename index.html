@@ -6,13 +6,14 @@
     <title>Apprecode</title>
 
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/animate.min.css">
+    <link rel="stylesheet" href="styles/animate.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
 
     <script src="scripts/jquery-3.5.1.min.js"></script>
     <script src="scripts/parallax.min.js"></script>
     <script src="scripts/swiper-bundle.min.js"></script>
     <script src="scripts/jquery.maskedinput.js"></script>
+    <script src="scripts/wow.min.js"></script>
     <script src="scripts/scripts.js"></script>
 
     <!-- generics -->
@@ -63,7 +64,7 @@
     <div class="right_social_block">
         <div class="container">
             <div class="links">
-                <a href="" target="_blank" class="animate__animated animate__zoomIn animate__delay-2s">
+                <a href="" target="_blank" class="wow zoomIn" data-wow-delay="1s">
                     <?xml version="1.0" encoding="utf-8"?>
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 17.6 18" style="enable-background:new 0 0 17.6 18;" xml:space="preserve">
@@ -84,7 +85,7 @@
                     </svg>
                 </a>
         
-                <a href="" target="_blank" class="animate__animated animate__zoomIn animate__delay-2s">
+                <a href="" target="_blank" class="wow zoomIn" data-wow-delay="1s">
                     <?xml version="1.0" encoding="utf-8"?>
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 10.3 19.7" style="enable-background:new 0 0 10.3 19.7;" xml:space="preserve">
@@ -98,7 +99,7 @@
                     </svg>
                 </a>
         
-                <a href="" target="_blank" class="animate__animated animate__zoomIn animate__delay-2s">
+                <a href="" target="_blank" class="wow zoomIn" data-wow-delay="1s">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><g><g><g><g><path fill="#fff" d="M12.343 9.055c0 1.991-1.62 3.612-3.612 3.612-1.99 0-3.61-1.62-3.61-3.612 0-1.99 1.62-3.61 3.61-3.61a3.615 3.615 0 0 1 3.612 3.61zm1.312 0a4.93 4.93 0 0 0-4.924-4.924 4.93 4.93 0 0 0-4.924 4.924 4.93 4.93 0 0 0 4.924 4.924 4.929 4.929 0 0 0 4.924-4.924z"/></g></g><g><g><path fill="#fff" d="M14.638 1.505c.938 0 1.701.762 1.701 1.7v11.758c0 .938-.763 1.7-1.7 1.7H2.88c-.938 0-1.701-.762-1.701-1.7V3.205c0-.938.763-1.7 1.7-1.7zm2.868 13.458V3.205A2.87 2.87 0 0 0 14.638.338H2.881A2.87 2.87 0 0 0 .014 3.205v11.758a2.87 2.87 0 0 0 2.867 2.867h11.757a2.87 2.87 0 0 0 2.868-2.867z"/></g></g><g><path fill="#fff" d="M12.187 4.348a1.277 1.277 0 1 1 2.553 0 1.277 1.277 0 0 1-2.553 0z"/></g></g></g></svg>
                 </a>
             </div>
@@ -128,13 +129,18 @@
     <section class="screen_1 container">
         <div class="row">
             <div class="col-m-12">
-                <h1 class="animate__animated animate__delay-1s animate__fadeInRight">
+                <div class="a">
+                    <svg class="circle_animate" height="200" width="200">
+                        <circle class="circle" cx="100" cy="100" r="95" stroke="#231f20" stroke-width="1" fill-opacity="0" />
+                    </svg>
+                </div>                
+                <h1 class="wow fadeInRight" data-wow-delay="1s">
                     Improve your business
                     with <span>AppRecode</span>
                     DevOps Services. 
                 </h1>
 
-                <a href="#contacts" class="default_btn get_in_touch animate__animated animate__delay-2s animate__zoomIn">Get in touch</a>
+                <a href="#contacts" class="default_btn get_in_touch wow zoomIn" data-wow-delay="1.2s">Get in touch</a>
             </div>
         </div>
 
@@ -158,9 +164,15 @@
             <div class="col-s-12 col-m-6 left">
                 <div class="row">
                     <div class="col-s-12 col-m-7 big info">
-                        <div class="num_wrap">30</div>
+                        <div class="num_wrap">
+                            <svg class="circle_animate" height="200" width="200">
+                                <circle class="circle" cx="100" cy="100" r="95" stroke="#231f20" stroke-width="1" fill-opacity="0" />
+                            </svg>
+                            
+                            <span class="wow zoomIn" data-wow-delay="0.5s">30</span>
+                        </div>
 
-                        <p>Successful Projects</p>
+                        <p class="wow fadeInUp" data-wow-delay="0.5s">Successful Projects</p>
                     </div>
                 </div>
 
@@ -168,9 +180,9 @@
                     <div class="col-m-6"></div>
 
                     <div class="col-s-12 col-m-6 small info">
-                        <div class="num_wrap">5</div>
+                        <div class="num_wrap wow zoomIn" data-wow-delay="0.5s">5</div>
 
-                        <p>years on the market</p>
+                        <p class="wow fadeInUp" data-wow-delay="0.5s">years on the market</p>
                     </div>
                 </div>
 
@@ -178,17 +190,17 @@
                     <div class="col-s-0 col-m-1"></div>
 
                     <div class="col-s-12 col-m-6 mid info">
-                        <div class="num_wrap">20</div>
+                        <div class="num_wrap wow zoomIn" data-wow-delay="0.5s">20</div>
 
-                        <p>Projects With AWS</p>
+                        <p class="wow fadeInUp" data-wow-delay="0.5s">Projects With AWS</p>
                     </div>
                 </div>
             </div>
 
             <div class="col-s-12 col-m-6 right">
-                <h1>Something <span>about us</span></h1>
+                <h1 class="wow fadeInRight" data-wow-delay="0.5s">Something <span>about us</span></h1>
 
-                <p>We believe great ideas deserve great implementation. We ensure this by delivering stability, reliability, and cost-efficiency of DevOps Services to companies in the USA and worldwide. <br><br>
+                <p class="wow fadeIn" data-wow-delay="0.7s" data-wow-offset="50">We believe great ideas deserve great implementation. We ensure this by delivering stability, reliability, and cost-efficiency of DevOps Services to companies in the USA and worldwide. <br><br>
                     We field dedicated teams with 14+ years of expertise in IT outsourcing and 5+ years in DevOps as a service.</p>
             </div>
         </div>
@@ -197,24 +209,22 @@
     <section id="services" class="screen_3 container">
         <div class="row">
             <div class="col-m-2"></div>
-            <h1 class="col-s-12">Our<span> services</span></h1>
+            <h1 class="col-s-12 wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">Our<span> services</span></h1>
         </div>
 
         <div class="row">
             <div class="col-s-12 col-m-5 shifted service">
-                <h2>Infrastructure
-                    Management</h2>
+                <h2 class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">Infrastructure Management</h2>
 
-                <p>Manage interactions between your cloud and on-premises environments, servers, storage, network, virtualization software and more.</p>
+                <p class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">Manage interactions between your cloud and on-premises environments, servers, storage, network, virtualization software and more.</p>
             </div>
 
             <div class="col-m-2"></div>
 
             <div class="col-s-12 col-m-5 service">
-                <h2>Operational
-                    Management</h2>
+                <h2 class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">Operational Management</h2>
 
-                <p>Design, oversee and control your cloud operational processes.</p>
+                <p class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">Design, oversee and control your cloud operational processes.</p>
             </div>
         </div>
 
@@ -222,35 +232,31 @@
             <div class="col-m-1"></div>
 
             <div class="col-s-12 col-m-5 shifted service">
-                <h2>Availability
-                    Management</h2>
+                <h2 class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">Availability Management</h2>
 
-                <p>Implement robust monitoring within event-driven management architecture.</p>
+                <p class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">Implement robust monitoring within event-driven management architecture.</p>
             </div>
 
             <div class="col-s-12 col-m-5 service">
-                <h2>Capacity
-                    Management</h2>
+                <h2 class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">Capacity Management</h2>
 
-                <p>Ensure your сloud resources are right-sized to serve business workloads in a cost-effective manner.</p>
+                <p class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">Ensure your сloud resources are right-sized to serve business workloads in a cost-effective manner.</p>
             </div>
         </div>
 
         <div class="row">
             <div class="col-s-12 col-m-5 shifted service">
-                <h2>Security
-                    Management</h2>
+                <h2 class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">Security Management</h2>
 
-                <p>Manage inspections, security audits and apply best security practices.</p>
+                <p class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">Manage inspections, security audits and apply best security practices.</p>
             </div>
 
             <div class="col-m-2"></div>
 
             <div class="col-s-12 col-m-5 service">
-                <h2>Release
-                    Management</h2>
+                <h2 class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">Release Management</h2>
 
-                <p>Increase the number of successful deployments through effective release management practices.</p>
+                <p class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">Increase the number of successful deployments through effective release management practices.</p>
             </div>
         </div>
 
@@ -258,38 +264,35 @@
             <div class="col-s-12 col-m-7"></div>
 
             <div class="col-s-12 col-m-5 service">
-                <h2>24/7 DevOps
-                    Support</h2>
+                <h2 class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">24/7 DevOps Support</h2>
 
-                <p>Extensive 24/7 end-to-end support of your infrastructures, workloads, and operations.</p>
+                <p class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">Extensive 24/7 end-to-end support of your infrastructures, workloads, and operations.</p>
             </div>
         </div>
 
-        <div class="aws_wrap">
-            <p class="aws">aws
+        <div class="aws_wrap wow zoomInB" data-wow-offset="100">
+            <p class="aws wow fadeInRight" data-wow-delay="0.5s">aws
                 <span>Services</span>
             </p>
 
-            <p class="text">
+            <p class="text wow fadeIn" data-wow-delay="0.5s" data-wow-offset="50">
                 We believe great ideas deserve great implementation. We ensure this by delivering stability, reliability, 
             </p>
         </div>
 
         <div class="row">
             <div class="col-s-12 col-m-5 shifted service">
-                <h2>AWS Migration
-                    Services</h2>
+                <h2 class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">AWS Migration Services</h2>
 
-                <p>We accelerate your migration on AWS with our AWS migration services. We seamlessly migrate your entire workload to AWS including databases & applications from any existing cloud platform or in-premise or co-lo data center. Our DevOps AWS migration ensures maximum uptime and optimized performance. Our other migration capabilities include capacity expansion, disaster recovery failover alternatives, and governance to name a few</p>
+                <p class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">We accelerate your migration on AWS with our AWS migration services. We seamlessly migrate your entire workload to AWS including databases & applications from any existing cloud platform or in-premise or co-lo data center. Our DevOps AWS migration ensures maximum uptime and optimized performance. Our other migration capabilities include capacity expansion, disaster recovery failover alternatives, and governance to name a few</p>
             </div>
 
             <div class="col-m-1"></div>
 
             <div class="col-s-12 col-m-5 service">
-                <h2>AWS Consulting
-                    & Audit</h2>
+                <h2 class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">AWS Consulting & Audit</h2>
 
-                <p>We steer your cloud deployment strategy for getting the most out of AWS. Our cloud experts analyze and examine your existing application infrastructure as well as current automation setup if any, perform a gap analysis and suggest a roadmap with remediation. We also understand your existing monitoring systems on AWS and list down the tools that can help you avail operational benefits of DevOps</p>
+                <p class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">We steer your cloud deployment strategy for getting the most out of AWS. Our cloud experts analyze and examine your existing application infrastructure as well as current automation setup if any, perform a gap analysis and suggest a roadmap with remediation. We also understand your existing monitoring systems on AWS and list down the tools that can help you avail operational benefits of DevOps</p>
             </div>
         </div>
 
@@ -297,19 +300,17 @@
             <div class="col-m-1"></div>
 
             <div class="col-s-12 col-m-5 shifted service">
-                <h2>AWS Managed
-                    Services</h2>
+                <h2 class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">AWS Managed Services</h2>
 
-                <p>Right from SysOps, security management, monitoring, performance/cost optimization, backups and disaster recovery to designing cloud and operational architecture, deploying security controls and managing OS updates, our end-to-end AWS Managed Services ensure that your infrastructure is optimized for better performance, scalability, and security</p>
+                <p class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">Right from SysOps, security management, monitoring, performance/cost optimization, backups and disaster recovery to designing cloud and operational architecture, deploying security controls and managing OS updates, our end-to-end AWS Managed Services ensure that your infrastructure is optimized for better performance, scalability, and security</p>
             </div>
 
             <div class="col-m-1"></div>
 
             <div class="col-s-12 col-m-5 service">
-                <h2>DevOps on
-                    AWS Cloud</h2>
+                <h2 class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">DevOps on AWS Cloud</h2>
 
-                <p>We automate end-to-end delivery pipeline across cloud platforms with specific expertise in DevOps AWS. We have built and deployed complex cloud architectures on Amazon web services and have an in-depth technical expertise in provisioning distributed application systems using DevOps tools on the AWS platform</p>
+                <p class="wow fadeInRight" data-wow-delay="0.5s" data-wow-offset="50">We automate end-to-end delivery pipeline across cloud platforms with specific expertise in DevOps AWS. We have built and deployed complex cloud architectures on Amazon web services and have an in-depth technical expertise in provisioning distributed application systems using DevOps tools on the AWS platform</p>
             </div>
         </div>
     </section>
@@ -318,16 +319,16 @@
         <div class="row">
             <div class="col-m-8"></div>
 
-            <h1 class="col-m-4">Why <span>we</span>?</h1>
+            <h1 class="col-m-4 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.5s">Why <span>we</span>?</h1>
         </div>
 
         <div class="row">
             <div class="col-m-1"></div>
 
             <div class="col-s-12 col-m-6 wy">
-                <img src="img/speed_icon.svg" alt="">
+                <img src="img/speed_icon.svg" alt="" class="wow fadeInRight" data-wow-offset="50" data-wow-delay="0.5s">
 
-                <div>
+                <div class="wow fadeIn" data-wow-offset="50" data-wow-delay="0.5s">
                     <h2>Speed & Rapid Delivery</h2>
 
                     <p>Innovate faster and increase the pace of releases.</p>
@@ -339,8 +340,9 @@
             <div class="col-m-6"></div>
 
             <div class="col-s-12 col-m-5 wy">
-                <img src="img/security_icon.svg" alt="">
-                <div>
+                <img src="img/security_icon.svg" alt="" class="wow fadeInRight" data-wow-offset="50" data-wow-delay="0.5s">
+                
+                <div class="wow fadeIn" data-wow-offset="50" data-wow-delay="0.5s">
                     <h2>Security</h2>
 
                     <p>Automated compliance policies, fine-grained control and configuration management techniques.</p>
@@ -350,9 +352,9 @@
 
         <div class="row">
             <div class="col-s-12 col-m-5 wy">
-                <img src="img/reliability_icon.svg" alt="">
+                <img src="img/reliability_icon.svg" alt="" class="wow fadeInRight" data-wow-offset="50" data-wow-delay="0.5s">
 
-                <div>
+                <div class="wow fadeIn" data-wow-offset="50" data-wow-delay="0.5s">
                     <h2>Reliability</h2>
 
                     <p>Continuous integration and continuous delivery test that each function is reliable and safe.</p>
@@ -364,9 +366,9 @@
             <div class="col-m-7"></div>
 
             <div class="col-s-12 col-m-5 wy">
-                <img src="img/scale_icon.svg" alt="">
+                <img src="img/scale_icon.svg" alt="" class="wow fadeInRight" data-wow-offset="50" data-wow-delay="0.5s">
 
-                <div>
+                <div class="wow fadeIn" data-wow-offset="50" data-wow-delay="0.5s">
                     <h2>Scale</h2>
 
                     <p>Automation and consistency with e.g. infrastructure as code. Automation and consistency with e.g. infra</p>
@@ -378,9 +380,9 @@
             <div class="col-m-2"></div>
 
             <div class="col-s-12 col-m-5 wy">
-                <img src="img/improved_icon.svg" alt="">
+                <img src="img/improved_icon.svg" alt="" class="wow fadeInRight" data-wow-offset="50" data-wow-delay="0.5s">
 
-                <div>
+                <div class="wow fadeIn" data-wow-offset="50" data-wow-delay="0.5s">
                     <h2>Improved collaboration</h2>
 
                     <p>Developers and operations teams collaborate and share responsibility</p>
@@ -391,15 +393,15 @@
 
     <section class="screen_5">
         <div class="container">
-            <h1>Get in <span>touch</span></h1>
+            <h1 class="wow fadeInUp" data-wow-delay="0.5s" data-wow-offset="50">Get in <span>touch</span></h1>
 
             <div class="row">
                 <div class="col-m-3"></div>
 
-                <h2 class="col-m-6">Tell us about your project and we’ll get in touch immediately</h2>
+                <h2 class="col-m-6 wow fadeIn" data-wow-offset="50" data-wow-delay="0.7s">Tell us about your project and we’ll get in touch immediately</h2>
             </div>
 
-            <a href="#contacts" class="default_btn get_in_touch">Get in touch</a>
+            <a href="#contacts" class="default_btn get_in_touch wow zoomIn" data-wow-offset="50" data-wow-delay="1s">Get in touch</a>
         </div>
     </section>
 
@@ -407,10 +409,10 @@
         <div class="row">
             <div class="col-m-1"></div>
 
-            <h1>Our <span>customers</span></h1>
+            <h1 class="wow fadeInRight" data-wow-offset="50" data-wow-delay="0.5s">Our <span>customers</span></h1>
         </div>
 
-        <div class="row sponsors">
+        <div class="row sponsors wow zoomIn" data-wow-offset="100" data-wow-delay="1s">
             <div class="col-m-3 sponsor"><img src="img/sponsor_1.svg" alt=""></div>
             <div class="col-m-3 sponsor"><img src="img/sponsor_2.svg" alt=""></div>
             <div class="col-m-3 sponsor"><img src="img/sponsor_3.svg" alt=""></div>
@@ -431,11 +433,11 @@
             <div class="col-m-8"></div>
 
             <div class="col-m-4">
-                <h1><span>Reviews</span></h1>
+                <h1 class="wow fadeInRight" data-wow-offset="100" data-wow-delay="0.5s"><span>Reviews</span></h1>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row wow fadeInUp" data-wow-offset="100" data-wow-delay="0.7s">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -501,7 +503,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row wow fadeIn" data-wow-offset="50" data-wow-delay="0.8s">
             <div class="col-m-5"></div>
 
             <div class="col-m-2">
@@ -541,11 +543,11 @@
     <section id="blog" class="screen_8 container">
         <div class="row">
             <div class="col-m-12">
-                <h1><span>Blog</span></h1>
+                <h1 class="wow fadeInRight" data-wow-offset="75" data-wow-delay="0.5s"><span>Blog</span></h1>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row wow fadeInUp" data-wow-offset="100" data-wow-delay="0.5s">
             <div class="col-m-1"></div>
 
             <div class="blog_link_wrap col-m-10">
@@ -573,7 +575,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row wow fadeInUp" data-wow-offset="100" data-wow-delay="0.5s">
             <div class="col-m-1"></div>
 
             <div class="blog_link_wrap col-m-10">
@@ -601,7 +603,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row wow fadeInUp" data-wow-offset="100" data-wow-delay="0.5s">
             <div class="col-m-1"></div>
 
             <div class="blog_link_wrap col-m-10 no_border">
@@ -629,31 +631,31 @@
             </div>
         </div>
 
-        <a href="blog.html" class="default_btn read_more">Read more</a>
+        <a href="blog.html" class="default_btn read_more wow zoomIn" data-wow-offset="100" data-wow-delay="0.5s">Read more</a>
     </section>
 
     <section id="contacts" class="screen_9 container">
         <div class="row">
             <div class="col-m-12">
-                <h1>Our <span>contacts</span></h1>
+                <h1 class="wow fadeInRight" data-wow-offset="50" data-wow-delay="0.5s">Our <span>contacts</span></h1>
             </div>
         </div>
 
         <div class="row">
             <div class="col-s-12 col-m-5 contacts">
-                <a href="tel:+380981565605" class="line">
+                <a href="tel:+380981565605" class="line wow fadeInUp" data-wow-delay="0.5s">
                     <img src="img/phone_icon.svg" alt="">
 
                     +38 (098) 156 56 05
                 </a>
 
-                <div class="line">
+                <div class="line wow fadeInUp" data-wow-delay="0.7s">
                     <img src="img/location_icon.svg" alt="">
 
                     Ukraine, Lviv, Naukova 123
                 </div>
 
-                <a href="mailto:apprecode@gmail.com" class="line">
+                <a href="mailto:apprecode@gmail.com" class="line wow fadeInUp" data-wow-delay="0.9s">
                     <img src="img/mail_icon.svg" alt="">
 
                     apprecode@gmail.com
@@ -661,7 +663,7 @@
             </div>
 
             <div class="col-s-12 col-7">
-                <div class="form-wrap">
+                <div class="form-wrap wow fadeIn" data-wow-delay="0.5s">
                     <h2>Get in <span>touch</span></h2>
 
                     <p>Leave information about yourself — and we’ll get back to you soon</p>

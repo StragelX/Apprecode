@@ -67,10 +67,12 @@ html {
   scroll-behavior: smooth;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  backface-visibility: hidden;
 }
 
 body {
   margin: 0;
+  backface-visibility: hidden;
   -webkit-font-smoothing: antialiased !important;
   background-color: $dark;
   color: #ffffff;
