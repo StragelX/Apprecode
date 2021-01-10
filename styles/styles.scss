@@ -57,6 +57,7 @@ h2 {
   width: 1366px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 100%;
 }
 
 .default_btn {
@@ -349,7 +350,6 @@ section {
 
   .left {
     .num_wrap {
-      border: 1px solid $aqua;
       border-radius: 50%;
       color: #ffffff;
       font-weight: 600;
@@ -368,7 +368,6 @@ section {
         stroke: $aqua;
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
-        animation: 2s stroke 5s ease-out forwards;
       }
 
       @keyframes stroke {
@@ -412,7 +411,6 @@ section {
         width: 175px;
         height: 175px;
         font-size: 72px;
-        border: none;
 
         svg {
           top: -13px;
@@ -437,6 +435,12 @@ section {
         height: 90px;
         font-size: 44px;
 
+        svg {
+          transform: scale(0.5) rotate(-90deg);
+          top: -56px;
+          left: -56px;
+        }
+
         &:after {
           font-size: 21px;
           line-height: 37px;
@@ -453,6 +457,12 @@ section {
         width: 120px;
         height: 120px;
         font-size: 48px;
+
+        svg {
+          transform: scale(0.6) rotate(-90deg);
+          top: -41px;
+          left: -41px;
+        }
 
         &:after {
           font-size: 22px;
@@ -487,6 +497,15 @@ section {
   }
 
   .service {
+    .halfclip_container {
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      transform: rotate(-62deg);
+      top: 6px;
+      left: 37px;
+    }
+
     h2 {
       max-width: 265px;
       padding-top: 97px;
@@ -494,7 +513,6 @@ section {
       margin-bottom: 33px;
       width: 265px;
       height: 175px;
-      background: url("../img/half_round.svg") no-repeat top right / contain;
     }
 
     p {
@@ -769,6 +787,7 @@ section {
       font-size: 16px;
       font-weight: 600;
       letter-spacing: 0.8px;
+      margin-bottom: 0;
     }
   }
 
@@ -1332,6 +1351,45 @@ footer {
   }
 }
 
-.aminating {
+.halfclip {
+  width: 50%;
+  height: 100%;
+  right: 0px;
+  position: absolute;
+  overflow: hidden;
+  transform-origin: left center;
+}
+
+.halfclip_container {
+  width: 300px;
+  height: 300px;
+}
+
+.halfcircle {
   opacity: 0;
+  box-sizing: border-box;
+  height: 100%;
+  right: 0px;
+  position: absolute;
+  border: solid 2px transparent;
+  border-top-color: $aqua;
+  border-left-color: $aqua;
+  border-radius: 50%;
+  width: 200%;
+  transform: rotate(-45deg);
+  transform: rotate(135deg);
+}
+
+@keyframes rotate {
+  0% {
+    opacity: 0;
+    transform: rotate(-45deg);
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(135deg);
+  }
 }

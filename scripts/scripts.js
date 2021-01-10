@@ -76,28 +76,4 @@ $( document ).ready(function() {
     // Menu higlight on scroll end
 
     new WOW().init();
-
-    // is in Viewport animation check start
-    // function isInViewport(el) {
-    //   const rect = el.getBoundingClientRect();
-    //   return (
-    //       rect.top >= 0 &&
-    //       rect.left >= 0 &&
-    //       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    //       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    //   );
-    // }
-    
-    // document.addEventListener('scroll', function () {
-    //   var cusid_ele = document.getElementsByClassName('aminating');
-    //   for (var i = 0; i < cusid_ele.length; ++i) {
-    //       if (isInViewport(cusid_ele[i])) {
-    //         let anim = $(cusid_ele[i]).attr('data-animation');
-    //         $(cusid_ele[i]).removeClass('aminating').addClass(anim)
-    //       }
-    //   }
-    // }, {
-    //     passive: true
-    // });
-    // is in Viewport animation check end
 });
