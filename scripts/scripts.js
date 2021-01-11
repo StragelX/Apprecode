@@ -90,4 +90,12 @@ $( document ).ready(function() {
     // Menu higlight on scroll end
 
     new WOW().init();
+
+    $('.burger').click(function(){
+      $('.burger, header .container nav').toggleClass('active');
+    });
+
+    $('header .container nav ul li').click(function(){
+      $('.burger, header .container nav').removeClass('active');
+    })
 });
