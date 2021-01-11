@@ -809,6 +809,33 @@ h2 {
   transition: fill 180ms;
 }
 
+.swiper_nav {
+  margin-top: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper_nav .swiper_prev::after {
+  display: none;
+}
+
+.swiper_nav .swiper_prev .arrow_btn {
+  transform: rotate(90deg);
+}
+
+.swiper_nav .swiper_next {
+  margin-left: 42px;
+}
+
+.swiper_nav .swiper_next::after {
+  display: none;
+}
+
+.swiper_nav .swiper_next .arrow_btn {
+  transform: rotate(-90deg);
+}
+
 header {
   z-index: 5;
   position: fixed;
@@ -1314,6 +1341,13 @@ section {
 }
 
 @media all and (max-width: 767px) {
+  .screen_2 {
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+}
+
+@media all and (max-width: 767px) {
   .screen_2 .left {
     order: 2;
   }
@@ -1450,6 +1484,7 @@ section {
 @media all and (max-width: 767px) {
   .screen_2 .right {
     order: 1;
+    padding-top: 0;
   }
 }
 
@@ -1466,6 +1501,10 @@ section {
 }
 
 @media all and (max-width: 767px) {
+  .screen_2 .right h1 {
+    margin-bottom: 50px;
+    margin-left: 40%;
+  }
   .screen_2 .right h1 span {
     display: block;
   }
@@ -1493,8 +1532,20 @@ section {
   }
 }
 
+@media all and (max-width: 767px) {
+  .screen_3 {
+    padding-top: 100px;
+  }
+}
+
 .screen_3 h1 {
   margin-bottom: 75px;
+}
+
+@media all and (max-width: 767px) {
+  .screen_3 h1 {
+    margin-bottom: -25px;
+  }
 }
 
 @media all and (max-width: 767px) {
@@ -1568,6 +1619,12 @@ section {
   font-size: 14px;
   font-weight: 300;
   line-height: 30px;
+}
+
+@media all and (max-width: 767px) {
+  .screen_3 .service p {
+    margin-left: 40px;
+  }
 }
 
 .screen_3 .service.shifted {
@@ -1691,6 +1748,13 @@ section {
   margin-bottom: 75px;
 }
 
+@media all and (max-width: 767px) {
+  .screen_4 h1 {
+    margin-bottom: 50px;
+    margin-left: 40%;
+  }
+}
+
 .screen_4 h2 {
   margin-bottom: 23px;
 }
@@ -1722,10 +1786,18 @@ section {
 }
 
 .screen_5 {
+  background-color: #070b12;
   box-shadow: 0 0 45px #000000;
   padding-top: 150px;
   padding-bottom: 150px;
   margin-bottom: 190px;
+}
+
+@media all and (max-width: 767px) {
+  .screen_5 {
+    padding: 75px 50px 100px;
+    margin-bottom: 100px;
+  }
 }
 
 .screen_5 h1 {
@@ -1760,6 +1832,12 @@ section {
   padding-bottom: 125px;
 }
 
+@media all and (max-width: 767px) {
+  .screen_6 {
+    padding-top: 100px;
+  }
+}
+
 .screen_6 h1 {
   margin-bottom: 100px;
 }
@@ -1782,6 +1860,13 @@ section {
   margin-bottom: 50px;
 }
 
+@media all and (max-width: 767px) {
+  .screen_6 .sponsors .sponsor {
+    height: 60px;
+    margin-bottom: 30px;
+  }
+}
+
 .screen_6 .sponsors img {
   max-width: 188px;
 }
@@ -1796,6 +1881,12 @@ section {
   margin-top: 0;
 }
 
+@media all and (max-width: 767px) {
+  .screen_7 {
+    padding-bottom: 100px;
+  }
+}
+
 .screen_7 h1 {
   margin-bottom: 75px;
 }
@@ -1803,6 +1894,10 @@ section {
 @media all and (max-width: 767px) {
   .screen_7 h1 {
     margin-bottom: 50px;
+    margin-left: 50%;
+  }
+  .screen_7 h1 span {
+    color: #fff;
   }
 }
 
@@ -1868,35 +1963,31 @@ section {
   line-height: 30px;
 }
 
-.swiper_nav {
-  margin-top: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media all and (max-width: 767px) {
+  .screen_7 .swiper_nav {
+    margin-top: 35px;
+  }
 }
 
-.swiper_nav .swiper_prev::after {
-  display: none;
-}
-
-.swiper_nav .swiper_prev .arrow_btn {
-  transform: rotate(90deg);
-}
-
-.swiper_nav .swiper_next {
-  margin-left: 42px;
-}
-
-.swiper_nav .swiper_next::after {
-  display: none;
-}
-
-.swiper_nav .swiper_next .arrow_btn {
-  transform: rotate(-90deg);
+@media all and (max-width: 767px) {
+  .screen_8 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 .screen_8 h1 {
   margin-bottom: 25px;
+}
+
+@media all and (max-width: 767px) {
+  .screen_8 h1 {
+    margin-bottom: 0;
+    padding-left: 15px;
+  }
+  .screen_8 h1 span {
+    color: #fff;
+  }
 }
 
 .screen_8 .read_more {
@@ -1978,6 +2069,12 @@ section {
 .screen_9 {
   padding-bottom: 0;
   margin-bottom: -10px;
+}
+
+@media all and (max-width: 767px) {
+  .screen_9 {
+    padding-top: 100px;
+  }
 }
 
 .screen_9 h1 {
