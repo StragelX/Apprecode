@@ -122,7 +122,8 @@ header {
   background: $dark url("../img/header_bg.jpg") no-repeat left center;
 
   @media all and (max-width: 767px) {
-    background: $dark url("../img/header_mobile_bg.jpg") no-repeat left center;
+    background: $dark url("../img/header_mobile_bg.jpg") no-repeat left center /
+    auto 100%;
   }
 
   .container {

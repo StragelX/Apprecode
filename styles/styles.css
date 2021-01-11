@@ -819,7 +819,7 @@ header {
 
 @media all and (max-width: 767px) {
   header {
-    background: #070b12 url("../img/header_mobile_bg.jpg") no-repeat left center;
+    background: #070b12 url("../img/header_mobile_bg.jpg") no-repeat left center/auto 100%;
   }
 }
 
