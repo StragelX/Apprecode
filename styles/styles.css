@@ -817,8 +817,17 @@ header {
   background: #070b12 url("../img/header_bg.jpg") no-repeat left center;
 }
 
-@media all and (max-width: 767px) {
-  header {
+@media all and (max-width: 769px) {
+  header:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    content: "";
     background: #070b12 url("../img/header_mobile_bg.jpg") no-repeat left center/auto 100%;
   }
 }
@@ -830,6 +839,19 @@ header .container {
   justify-content: space-between;
   padding-left: 45px;
   padding-right: 45px;
+}
+
+@media all and (max-width: 769px) {
+  header .container > * {
+    z-index: 3;
+  }
+}
+
+@media all and (max-width: 767px) {
+  header .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 header .container .logo {
@@ -852,13 +874,16 @@ header .container nav {
 @media all and (max-width: 769px) {
   header .container nav {
     position: fixed;
-    top: 100px;
+    top: 0;
+    padding-top: 150px;
+    z-index: 1;
     left: 0;
     right: 0;
     bottom: 0;
     flex-wrap: wrap;
     transform: translateX(100%);
     transition: transform 360ms;
+    background: url("../img/mobile_menu_bg.jpg") no-repeat top 31px center/cover;
   }
   header .container nav.active {
     transform: translateX(0);
@@ -945,6 +970,7 @@ header .container .get_in_touch {
   header .container .get_in_touch {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 50px;
   }
 }
 
@@ -1233,13 +1259,34 @@ section {
 
 .screen_1 {
   height: 100vh;
-  padding-top: 260px;
+  padding-top: 0;
   padding-bottom: 0;
+}
+
+.screen_1 .row {
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .screen_1 h1 {
   max-width: 758px;
   margin-bottom: 40px;
+}
+
+.screen_1 .get_in_touch {
+  width: 273px;
+  height: 50px;
+  border-radius: 25px;
+  line-height: 48px;
+}
+
+@media all and (max-width: 767px) {
+  .screen_1 .get_in_touch {
+    width: 252px;
+    height: 45px;
+    border-radius: 23px;
+    line-height: 43px;
+  }
 }
 
 .screen_1 .scroll_screen_1 {
@@ -1251,17 +1298,19 @@ section {
 @media all and (max-width: 769px) {
   .screen_1 .scroll_screen_1 {
     right: 20px;
-  }
-}
-
-@media all and (max-width: 767px) {
-  .screen_1 .scroll_screen_1 {
-    display: none;
+    bottom: 30px;
   }
 }
 
 .screen_2 {
   display: flex;
+  padding-top: 250px;
+}
+
+@media all and (max-width: 1025px) {
+  .screen_2 {
+    padding-top: 110px;
+  }
 }
 
 @media all and (max-width: 767px) {
@@ -1338,9 +1387,9 @@ section {
   transform: scale(0.9) rotate(-90deg);
 }
 
-.screen_2 .left .big .num_wrap:after {
+.screen_2 .left .big .num_wrap span:after {
   font-size: 34px;
-  line-height: 60px;
+  vertical-align: 25px;
 }
 
 @media all and (max-width: 767px) {
@@ -1366,9 +1415,9 @@ section {
   left: -56px;
 }
 
-.screen_2 .left .small .num_wrap:after {
+.screen_2 .left .small .num_wrap span:after {
   font-size: 21px;
-  line-height: 37px;
+  vertical-align: 14px;
 }
 
 .screen_2 .left .mid p {
@@ -1387,9 +1436,9 @@ section {
   left: -41px;
 }
 
-.screen_2 .left .mid .num_wrap:after {
+.screen_2 .left .mid .num_wrap span:after {
   font-size: 22px;
-  line-height: 39px;
+  vertical-align: 15px;
 }
 
 @media all and (max-width: 769px) {
@@ -1413,6 +1462,12 @@ section {
 @media all and (max-width: 1001px) {
   .screen_2 .right h1 {
     max-width: 100%;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .screen_2 .right h1 span {
+    display: block;
   }
 }
 
@@ -1498,7 +1553,7 @@ section {
 }
 
 .screen_3 .service h2 {
-  max-width: 265px;
+  max-width: 240px;
   padding-top: 97px;
   padding-right: 20px;
   margin-bottom: 33px;
@@ -1655,12 +1710,8 @@ section {
   flex: none;
   margin-right: 30px;
   width: 45px;
-}
-
-@media all and (max-width: 767px) {
-  .screen_4 .wy img {
-    align-self: baseline;
-  }
+  align-self: baseline;
+  margin-top: -2px;
 }
 
 .screen_4 .wy p {
@@ -1690,6 +1741,19 @@ section {
 .screen_5 .get_in_touch {
   margin-left: auto;
   margin-right: auto;
+  width: 273px;
+  height: 50px;
+  border-radius: 25px;
+  line-height: 48px;
+}
+
+@media all and (max-width: 767px) {
+  .screen_5 .get_in_touch {
+    width: 252px;
+    height: 45px;
+    border-radius: 23px;
+    line-height: 43px;
+  }
 }
 
 .screen_6 {
@@ -1698,6 +1762,12 @@ section {
 
 .screen_6 h1 {
   margin-bottom: 100px;
+}
+
+@media all and (max-width: 767px) {
+  .screen_6 h1 {
+    margin-bottom: 50px;
+  }
 }
 
 .screen_6 .sponsors {
@@ -1722,8 +1792,18 @@ section {
   }
 }
 
+.screen_6 .swiper_nav {
+  margin-top: 0;
+}
+
 .screen_7 h1 {
   margin-bottom: 75px;
+}
+
+@media all and (max-width: 767px) {
+  .screen_7 h1 {
+    margin-bottom: 50px;
+  }
 }
 
 .screen_7 .swiper-container {
@@ -1751,6 +1831,12 @@ section {
 .screen_7 .swiper-slide h2 {
   color: #00ffd8;
   height: 36px;
+}
+
+@media all and (max-width: 767px) {
+  .screen_7 .swiper-slide h2 {
+    height: 26px;
+  }
 }
 
 .screen_7 .swiper-slide p.author {
@@ -1782,30 +1868,30 @@ section {
   line-height: 30px;
 }
 
-.screen_7 .swiper_nav {
+.swiper_nav {
   margin-top: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.screen_7 .swiper_prev::after {
+.swiper_nav .swiper_prev::after {
   display: none;
 }
 
-.screen_7 .swiper_prev .arrow_btn {
+.swiper_nav .swiper_prev .arrow_btn {
   transform: rotate(90deg);
 }
 
-.screen_7 .swiper_next {
+.swiper_nav .swiper_next {
   margin-left: 42px;
 }
 
-.screen_7 .swiper_next::after {
+.swiper_nav .swiper_next::after {
   display: none;
 }
 
-.screen_7 .swiper_next .arrow_btn {
+.swiper_nav .swiper_next .arrow_btn {
   transform: rotate(-90deg);
 }
 
@@ -1831,6 +1917,7 @@ section {
     margin-right: 15px;
     max-width: calc(100% - 30px);
     min-width: calc(100% - 30px);
+    margin-bottom: 75px;
   }
 }
 
@@ -1889,7 +1976,8 @@ section {
 }
 
 .screen_9 {
-  padding-bottom: 150px;
+  padding-bottom: 0;
+  margin-bottom: -10px;
 }
 
 .screen_9 h1 {
@@ -2335,6 +2423,7 @@ footer a:hover {
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.8px;
+  margin-bottom: 0;
 }
 
 @media all and (max-width: 767px) {
@@ -2448,6 +2537,13 @@ footer a:hover {
 
 .read_also h1 {
   margin-bottom: 48px;
+}
+
+@media all and (max-width: 767px) {
+  .read_also h1 {
+    margin-bottom: 0;
+    padding-left: 30px;
+  }
 }
 
 .e404_wrap {

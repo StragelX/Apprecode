@@ -14,14 +14,14 @@ $( document ).ready(function() {
       scalarY: 3.5
     });
 
-    var mySwiper = new Swiper('.swiper-container', {
+    var reviewSlider = new Swiper('.reviewSlider', {
         loop: true,
         spaceBetween: 30,
         slidesPerView: 3,
       
         navigation: {
-          nextEl: '.swiper_next',
-          prevEl: '.swiper_prev',
+          nextEl: '.review_next',
+          prevEl: '.review_prev',
         },
 
         breakpoints: {
@@ -38,6 +38,17 @@ $( document ).ready(function() {
           }
         }
     })
+
+    var sponsorsSlider = new Swiper('.sponsorsSlider', {
+      loop: true,
+      spaceBetween: 0,
+      slidesPerView: 1,
+    
+      navigation: {
+        nextEl: '.sponsors_next',
+        prevEl: '.sponsors_prev',
+      },
+  })
 
     $(".call_modal").click(function(){
       $("body").addClass("show_modal");

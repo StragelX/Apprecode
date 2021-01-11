@@ -121,9 +121,20 @@ header {
   box-shadow: 0 6px 45px rgba(0, 0, 0, 0.95);
   background: $dark url("../img/header_bg.jpg") no-repeat left center;
 
-  @media all and (max-width: 767px) {
-    background: $dark url("../img/header_mobile_bg.jpg") no-repeat left center /
-    auto 100%;
+  @media all and (max-width: 769px) {
+    &:after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      content: "";
+      background: $dark url("../img/header_mobile_bg.jpg") no-repeat left center /
+        auto 100%;
+    }
   }
 
   .container {
@@ -133,6 +144,17 @@ header {
     justify-content: space-between;
     padding-left: 45px;
     padding-right: 45px;
+
+    @media all and (max-width: 769px) {
+      & > * {
+        z-index: 3;
+      }
+    }
+
+    @media all and (max-width: 767px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
 
     .logo {
       height: 19px;
@@ -152,13 +174,17 @@ header {
 
       @media all and (max-width: 769px) {
         position: fixed;
-        top: 100px;
+        top: 0;
+        padding-top: 150px;
+        z-index: 1;
         left: 0;
         right: 0;
         bottom: 0;
         flex-wrap: wrap;
         transform: translateX(100%);
         transition: transform 360ms;
+        background: url("../img/mobile_menu_bg.jpg") no-repeat top 31px center /
+          cover;
 
         &.active {
           transform: translateX(0);
@@ -238,6 +264,7 @@ header {
       @media all and (max-width: 769px) {
         margin-left: auto;
         margin-right: auto;
+        margin-top: 50px;
       }
     }
 
@@ -518,12 +545,31 @@ section {
 
 .screen_1 {
   height: 100vh;
-  padding-top: 260px;
+  padding-top: 0;
   padding-bottom: 0;
+
+  .row {
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
   h1 {
     max-width: 758px;
     margin-bottom: 40px;
+  }
+
+  .get_in_touch {
+    width: 273px;
+    height: 50px;
+    border-radius: 25px;
+    line-height: 48px;
+
+    @media all and (max-width: 767px) {
+      width: 252px;
+      height: 45px;
+      border-radius: 23px;
+      line-height: 43px;
+    }
   }
 
   .scroll_screen_1 {
@@ -533,16 +579,18 @@ section {
 
     @media all and (max-width: 769px) {
       right: 20px;
-    }
-
-    @media all and (max-width: 767px) {
-      display: none;
+      bottom: 30px;
     }
   }
 }
 
 .screen_2 {
   display: flex;
+  padding-top: 250px;
+
+  @media all and (max-width: 1025px) {
+    padding-top: 110px;
+  }
 
   .left {
     @media all and (max-width: 767px) {
@@ -619,9 +667,9 @@ section {
           transform: scale(0.9) rotate(-90deg);
         }
 
-        &:after {
+        span:after {
           font-size: 34px;
-          line-height: 60px;
+          vertical-align: 25px;
         }
       }
     }
@@ -647,9 +695,9 @@ section {
           left: -56px;
         }
 
-        &:after {
+        span:after {
           font-size: 21px;
-          line-height: 37px;
+          vertical-align: 14px;
         }
       }
     }
@@ -670,9 +718,9 @@ section {
           left: -41px;
         }
 
-        &:after {
+        span:after {
           font-size: 22px;
-          line-height: 39px;
+          vertical-align: 15px;
         }
       }
     }
@@ -694,6 +742,12 @@ section {
 
       @media all and (max-width: 1001px) {
         max-width: 100%;
+      }
+
+      @media all and (max-width: 767px) {
+        span {
+          display: block;
+        }
       }
     }
 
@@ -777,7 +831,7 @@ section {
     }
 
     h2 {
-      max-width: 265px;
+      max-width: 240px;
       padding-top: 97px;
       padding-right: 20px;
       margin-bottom: 33px;
@@ -927,10 +981,8 @@ section {
       flex: none;
       margin-right: 30px;
       width: 45px;
-
-      @media all and (max-width: 767px) {
-        align-self: baseline;
-      }
+      align-self: baseline;
+      margin-top: -2px;
     }
 
     p {
@@ -961,6 +1013,17 @@ section {
   .get_in_touch {
     margin-left: auto;
     margin-right: auto;
+    width: 273px;
+    height: 50px;
+    border-radius: 25px;
+    line-height: 48px;
+
+    @media all and (max-width: 767px) {
+      width: 252px;
+      height: 45px;
+      border-radius: 23px;
+      line-height: 43px;
+    }
   }
 }
 
@@ -969,6 +1032,10 @@ section {
 
   h1 {
     margin-bottom: 100px;
+
+    @media all and (max-width: 767px) {
+      margin-bottom: 50px;
+    }
   }
 
   .sponsors {
@@ -990,11 +1057,19 @@ section {
       }
     }
   }
+
+  .swiper_nav {
+    margin-top: 0;
+  }
 }
 
 .screen_7 {
   h1 {
     margin-bottom: 75px;
+
+    @media all and (max-width: 767px) {
+      margin-bottom: 50px;
+    }
   }
 
   .swiper-container {
@@ -1017,6 +1092,10 @@ section {
     h2 {
       color: $aqua;
       height: 36px;
+
+      @media all and (max-width: 767px) {
+        height: 26px;
+      }
     }
 
     p.author {
@@ -1048,13 +1127,13 @@ section {
       line-height: 30px;
     }
   }
+}
 
-  .swiper_nav {
-    margin-top: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.swiper_nav {
+  margin-top: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .swiper_prev {
     &::after {
@@ -1101,6 +1180,7 @@ section {
     margin-right: 15px;
     max-width: calc(100% - 30px);
     min-width: calc(100% - 30px);
+    margin-bottom: 75px;
   }
 
   .section_date {
@@ -1155,7 +1235,8 @@ section {
 }
 
 .screen_9 {
-  padding-bottom: 150px;
+  padding-bottom: 0;
+  margin-bottom: -10px;
 
   h1 {
     margin-bottom: 110px;
@@ -1592,6 +1673,7 @@ footer {
       font-size: 16px;
       font-weight: 600;
       letter-spacing: 0.8px;
+      margin-bottom: 0;
 
       @media all and (max-width: 767px) {
         font-size: 12px;
@@ -1706,6 +1788,11 @@ footer {
 .read_also {
   h1 {
     margin-bottom: 48px;
+
+    @media all and (max-width: 767px) {
+      margin-bottom: 0;
+      padding-left: 30px;
+    }
   }
 }
 
