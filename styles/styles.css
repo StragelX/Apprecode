@@ -1735,6 +1735,12 @@ section {
   padding: 50px 45px 75px;
 }
 
+@media all and (max-width: 767px) {
+  .screen_7 .swiper-slide {
+    padding: 50px 35px 75px;
+  }
+}
+
 .screen_7 .swiper-slide h2 {
   color: #00ffd8;
   height: 36px;
@@ -1834,6 +1840,13 @@ section {
   font-weight: 600;
   letter-spacing: 0.8px;
   margin-bottom: 0;
+}
+
+@media all and (max-width: 767px) {
+  .blog_link_wrap .section_date p {
+    font-size: 12px;
+    letter-spacing: 0.6px;
+  }
 }
 
 .blog_link_wrap h2 {
@@ -2315,6 +2328,13 @@ footer a:hover {
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.8px;
+}
+
+@media all and (max-width: 767px) {
+  .blog_page_wrap .section_date p {
+    font-size: 12px;
+    letter-spacing: 0.6px;
+  }
 }
 
 .blog_page_wrap ul {

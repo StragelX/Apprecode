@@ -1004,6 +1004,10 @@ section {
     border: 2px solid $aqua;
     padding: 50px 45px 75px;
 
+    @media all and (max-width: 767px) {
+      padding: 50px 35px 75px;
+    }
+
     h2 {
       color: $aqua;
       height: 36px;
@@ -1105,6 +1109,11 @@ section {
       font-weight: 600;
       letter-spacing: 0.8px;
       margin-bottom: 0;
+
+      @media all and (max-width: 767px) {
+        font-size: 12px;
+        letter-spacing: 0.6px;
+      }
     }
   }
 
@@ -1577,6 +1586,11 @@ footer {
       font-size: 16px;
       font-weight: 600;
       letter-spacing: 0.8px;
+
+      @media all and (max-width: 767px) {
+        font-size: 12px;
+        letter-spacing: 0.6px;
+      }
     }
   }
 
