@@ -814,6 +814,13 @@ header {
   position: fixed;
   width: 100%;
   box-shadow: 0 6px 45px rgba(0, 0, 0, 0.95);
+  background: #070b12 url("../img/header_bg.jpg") no-repeat left center;
+}
+
+@media all and (max-width: 767px) {
+  header {
+    background: #070b12 url("../img/header_mobile_bg.jpg") no-repeat left center;
+  }
 }
 
 header .container {

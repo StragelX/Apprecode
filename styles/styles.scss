@@ -119,6 +119,10 @@ header {
   position: fixed;
   width: 100%;
   box-shadow: 0 6px 45px rgba(0, 0, 0, 0.95);
+  background: $dark url("../img/header_bg.jpg") no-repeat left center;
+  @media all and (max-width: 767px) {
+    background: $dark url("../img/header_mobile_bg.jpg") no-repeat left center;
+  }
 
   .container {
     height: 100px;
