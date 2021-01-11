@@ -990,6 +990,12 @@ header .container .get_in_touch {
   transform: translateY(-50%);
 }
 
+@media all and (max-width: 1025px) {
+  .right_social_block .links {
+    right: 30px;
+  }
+}
+
 .right_social_block a {
   display: block;
   pointer-events: all;
@@ -1048,6 +1054,7 @@ section {
   align-items: center;
   justify-content: center;
   cursor: default;
+  flex: none;
 }
 
 .screen_2 .left .num_wrap svg {
@@ -1360,6 +1367,13 @@ section {
   padding-left: 10px;
 }
 
+@media all and (max-width: 1025px) {
+  .screen_7 .swiper-container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
 .screen_7 .swiper-slide {
   border: 2px solid #00ffd8;
   padding: 50px 45px 75px;
@@ -1651,6 +1665,13 @@ footer {
   height: 75px;
   background-color: #070b12;
   box-shadow: 0 -3px 45px #000000;
+}
+
+@media all and (max-width: 1025px) {
+  footer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 footer .container {

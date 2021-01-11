@@ -295,6 +295,10 @@ header {
     right: 50px;
     width: 20px;
     transform: translateY(-50%);
+
+    @media all and (max-width: 1025px) {
+      right: 30px;
+    }
   }
 
   a {
@@ -357,6 +361,7 @@ section {
       align-items: center;
       justify-content: center;
       cursor: default;
+      flex: none;
 
       svg {
         position: absolute;
@@ -689,6 +694,11 @@ section {
 
   .swiper-container {
     padding-left: 10px;
+
+    @media all and (max-width: 1025px) {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
   }
 
   .swiper-slide {
@@ -997,6 +1007,11 @@ footer {
   height: 75px;
   background-color: $dark;
   box-shadow: 0 -3px 45px #000000;
+
+  @media all and (max-width: 1025px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
   .container {
     display: flex;

@@ -23,6 +23,20 @@ $( document ).ready(function() {
           nextEl: '.swiper_next',
           prevEl: '.swiper_prev',
         },
+
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+
+          767: {
+            slidesPerView: 2,
+          },
+
+          1000: {
+            slidesPerView: 3,
+          }
+        }
     })
 
     $(".call_modal").click(function(){
