@@ -428,7 +428,7 @@ a h6 {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 768px) and (max-width: 1000px) {
   .s-hide {
     display: none !important;
   }
@@ -516,7 +516,7 @@ a h6 {
   }
 }
 
-@media (max-width: 1025px) {
+@media (min-width: 1001px) and (max-width: 1025px) {
   .sm-hide {
     display: none !important;
   }
@@ -952,6 +952,12 @@ header .container .get_in_touch {
   text-align: left;
 }
 
+@media all and (max-width: 1025px) {
+  .cookies p {
+    max-width: 90%;
+  }
+}
+
 .cookies p a {
   color: #fff;
   font-weight: 600;
@@ -1167,6 +1173,12 @@ section {
   margin-bottom: 35px;
 }
 
+@media all and (max-width: 1001px) {
+  .screen_2 .right h1 {
+    max-width: 100%;
+  }
+}
+
 .screen_2 .right p {
   margin-left: 30px;
   max-width: 442px;
@@ -1175,6 +1187,12 @@ section {
   font-weight: 300;
   line-height: 30px;
   text-align: left;
+}
+
+@media all and (max-width: 1001px) {
+  .screen_2 .right p {
+    max-width: 100%;
+  }
 }
 
 .screen_3 h1 {
@@ -1506,6 +1524,13 @@ section {
 .screen_9 .contacts {
   padding-top: 215px;
   padding-left: 39px;
+}
+
+@media all and (max-width: 769px) {
+  .screen_9 .contacts {
+    padding-bottom: 100px;
+    padding-top: 0;
+  }
 }
 
 .screen_9 .contacts .line {

@@ -1,6 +1,6 @@
 $xs: #{"(max-width: 767px)"};
-$s: #{"(min-width: 1000px)"};
-$sm: #{"(max-width: 1025px)"};
+$s: #{"(min-width: 768px) and (max-width: 1000px)"};
+$sm: #{"(min-width: 1001px) and (max-width: 1025px)"};
 $m: #{"(min-width: 1025px)"};
 
 $grid-count: 12;
