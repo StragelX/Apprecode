@@ -900,6 +900,7 @@ header .container nav {
 
 @media all and (max-width: 769px) {
   header .container nav {
+    max-height: 100vh;
     position: fixed;
     top: 0;
     padding-top: 150px;
@@ -1786,7 +1787,6 @@ section {
 }
 
 .screen_5 {
-  background-color: #070b12;
   box-shadow: 0 0 45px #000000;
   padding-top: 150px;
   padding-bottom: 150px;
@@ -2136,6 +2136,12 @@ section {
 
 .screen_9 .contacts .line + .line {
   margin-top: 50px;
+}
+
+@media all and (max-width: 767px) {
+  .screen_9 .contacts .line + .line {
+    margin-top: 25px;
+  }
 }
 
 .screen_9 .contacts a.line {
@@ -2493,11 +2499,11 @@ footer a:hover {
   font-weight: 600;
   letter-spacing: 0.8px;
   line-height: 24px;
-  margin-bottom: 0;
 }
 
 .blog_page_wrap p.subtitle.green {
   color: #00ffd8;
+  margin-bottom: 0;
 }
 
 .blog_page_wrap p.mid_title {
@@ -2729,7 +2735,6 @@ footer a:hover {
 
 .read_also {
   box-shadow: 0 0 45px #000;
-  background-color: #070b12;
 }
 
 .read_also h1 {

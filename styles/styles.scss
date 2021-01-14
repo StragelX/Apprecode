@@ -202,6 +202,7 @@ header {
       background: #070b12;
 
       @media all and (max-width: 769px) {
+        max-height: 100vh;
         position: fixed;
         top: 0;
         padding-top: 150px;
@@ -1049,7 +1050,6 @@ section {
 }
 
 .screen_5 {
-  background-color: $dark;
   box-shadow: 0 0 45px #000000;
   padding-top: 150px;
   padding-bottom: 150px;
@@ -1360,6 +1360,10 @@ section {
 
       & + .line {
         margin-top: 50px;
+
+        @media all and (max-width: 767px) {
+          margin-top: 25px;
+        }
       }
     }
 
@@ -1713,10 +1717,10 @@ footer {
       font-weight: 600;
       letter-spacing: 0.8px;
       line-height: 24px;
-      margin-bottom: 0;
 
       &.green {
         color: $aqua;
+        margin-bottom: 0;
       }
     }
 
@@ -1932,7 +1936,6 @@ footer {
 
 .read_also {
   box-shadow: 0 0 45px #000;
-  background-color: $dark;
 
   h1 {
     margin-bottom: 48px;
