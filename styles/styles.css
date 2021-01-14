@@ -1092,16 +1092,19 @@ header .burger {
 
 .bg .layer1 {
   background: url("../img/top_bg_big.png") no-repeat center/cover;
+  background: url("../img/bg_desktop_1.svg") no-repeat top left;
 }
 
 @media all and (max-width: 767px) {
   .bg .layer1 {
     background: url("../img/mobile_top_bg.png") no-repeat top center/auto 50%;
+    background: url("../img/bg_mobile_1.svg") no-repeat top center;
   }
 }
 
 .bg .layer2 {
   background: url("../img/top_bg_mid.png") no-repeat center/cover;
+  background: url("../img/bg_desktop_2.svg") no-repeat right bottom;
 }
 
 @media all and (max-width: 767px) {
@@ -1112,11 +1115,13 @@ header .burger {
 
 .bg .layer3 {
   background: url("../img/top_bg_sml.png") no-repeat center/cover;
+  background: url("../img/bg_desktop_3.svg") no-repeat left bottom;
 }
 
 @media all and (max-width: 767px) {
   .bg .layer3 {
     background: url("../img/mobile_bottom_bg.png") no-repeat bottom center/auto 50%;
+    background: url("../img/bg_mobile_2.svg") no-repeat bottom center;
   }
 }
 
@@ -2345,7 +2350,7 @@ footer a {
 }
 
 footer a img {
-  height: 29px;
+  height: 35px;
 }
 
 footer a:hover {
@@ -2372,19 +2377,7 @@ footer a:hover {
   pointer-events: none;
 }
 
-.modal_overlay .modal {
-  width: 375px;
-  padding: 75px 77px 75px 52px;
-  padding-left: 52px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 6px 45px rgba(0, 0, 0, 0.95);
-  background: url("../img/modal_bg.jpg") no-repeat center/cover;
-}
-
-.modal_overlay .modal .close {
+.modal_overlay .close {
   width: 17px;
   height: 17px;
   position: absolute;
@@ -2393,14 +2386,25 @@ footer a:hover {
   right: 25px;
 }
 
-.modal_overlay .modal .close path {
+.modal_overlay .close path {
   fill: #fff;
   transition: fill 180ms;
 }
 
-.modal_overlay .modal .close:hover path {
+.modal_overlay .close:hover path {
   fill: #00ffd8;
   transition: fill 180ms;
+}
+
+.modal_overlay .modal {
+  width: 375px;
+  padding: 75px 77px 75px 52px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 6px 45px rgba(0, 0, 0, 0.95);
+  background: url("../img/modal_bg.jpg") no-repeat center/cover;
 }
 
 .modal_overlay .modal h2 {
@@ -2423,6 +2427,139 @@ footer a:hover {
 
 .modal_overlay .modal .close_modal {
   margin-left: 26px;
+}
+
+.modal_overlay .modal_form {
+  width: 341px;
+  max-width: calc(100% - 34px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 6px 45px rgba(0, 0, 0, 0.95);
+  background: url("../img/modal_bg.jpg") no-repeat center/cover;
+}
+
+.modal_overlay .modal_form .form-wrap {
+  padding: 100px 64px 80px;
+}
+
+@media all and (max-width: 767px) {
+  .modal_overlay .modal_form .form-wrap {
+    padding: 50px 15px;
+  }
+}
+
+.modal_overlay .modal_form .form-wrap h2 span {
+  color: #00ffd8;
+}
+
+.modal_overlay .modal_form .form-wrap p {
+  max-width: 374px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 45px;
+}
+
+.modal_overlay .modal_form .form-wrap input {
+  display: block;
+  background: transparent;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  line-height: 24px;
+  padding-left: 20px;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  transition: border-bottom 180ms, color 180ms;
+}
+
+.modal_overlay .modal_form .form-wrap input:focus, .modal_overlay .modal_form .form-wrap input:invalid {
+  color: #00ffd8;
+  border-bottom: 1px solid #00ffd8;
+  transition: border-bottom 180ms, color 180ms;
+}
+
+.modal_overlay .modal_form .form-wrap .input_wrap .placeholder {
+  pointer-events: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 2px;
+  white-space: nowrap;
+  opacity: 1;
+  transition: opacity 180ms, top 180ms, color 180ms;
+}
+
+.modal_overlay .modal_form .form-wrap .input_wrap .error {
+  opacity: 0;
+  transition: opacity 180ms;
+  position: absolute;
+  top: 110%;
+  left: 20px;
+  color: #00ffd8;
+}
+
+.modal_overlay .modal_form .form-wrap .input_wrap + .input_wrap {
+  margin-top: 40px;
+}
+
+.modal_overlay .modal_form .form-wrap .input_wrap input:focus + .placeholder,
+.modal_overlay .modal_form .form-wrap .input_wrap .filled + .placeholder,
+.modal_overlay .modal_form .form-wrap .input_wrap input:invalid + .placeholder {
+  top: 110%;
+  transition: opacity 180ms, top 180ms, color 180ms;
+}
+
+.modal_overlay .modal_form .form-wrap .input_wrap input:invalid + .placeholder {
+  opacity: 0;
+  transition: opacity 180ms, top 180ms, color 180ms;
+}
+
+.modal_overlay .modal_form .form-wrap .input_wrap input:invalid + .placeholder + .error {
+  opacity: 1;
+  transition: opacity 180ms;
+}
+
+.modal_overlay .modal_form .form-wrap .input_wrap textarea {
+  margin-bottom: 45px;
+  min-height: 150px;
+  padding: 15px 20px;
+  background: transparent;
+  resize: vertical;
+  width: 100%;
+  height: 161px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  line-height: 24px;
+  transition: color 180ms, border 180ms;
+}
+
+.modal_overlay .modal_form .form-wrap .input_wrap textarea + .placeholder {
+  top: 19px;
+}
+
+.modal_overlay .modal_form .form-wrap .input_wrap textarea:focus {
+  color: #00ffd8;
+  border: 1px solid #00ffd8;
+  transition: color 180ms, border 180ms;
+}
+
+.modal_overlay .modal_form .form-wrap .input_wrap textarea:focus + .placeholder, .modal_overlay .modal_form .form-wrap .input_wrap textarea.filled + .placeholder {
+  top: -20px;
+}
+
+.modal_overlay .modal_form .form-wrap .call_modal {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .privecy_wrap {
@@ -2465,7 +2602,10 @@ footer a:hover {
 
 @media all and (max-width: 767px) {
   .blog_page_wrap h1 {
-    padding-left: 15px;
+    padding-left: 0;
+  }
+  .blog_page_wrap h1 + p.categories {
+    padding-left: 0;
   }
 }
 
@@ -2707,7 +2847,7 @@ footer a:hover {
 
 @media all and (max-width: 767px) {
   .blog_page_wrap .categories_wrap {
-    padding-left: 15px;
+    padding-left: 0;
     margin-bottom: 10px;
   }
 }
@@ -2764,7 +2904,8 @@ footer a:hover {
 
 @media all and (max-width: 375px) {
   .e404_wrap {
-    padding-left: 15px;
+    padding-left: 60px;
+    padding-top: 35px;
   }
 }
 
@@ -2795,6 +2936,12 @@ footer a:hover {
   }
 }
 
+@media all and (max-width: 375px) {
+  .e404_wrap:before {
+    left: 0;
+  }
+}
+
 .e404_wrap h1 {
   margin-top: 180px;
   margin-bottom: 15px;
@@ -2822,5 +2969,13 @@ footer a:hover {
   height: 50px;
   line-height: 48px;
   border-radius: 25px;
+}
+
+@media all and (max-width: 375px) {
+  .e404_wrap .to_main {
+    width: 250px;
+    height: 45px;
+    line-height: 43px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

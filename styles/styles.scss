@@ -399,14 +399,17 @@ header {
 
   .layer1 {
     background: url("../img/top_bg_big.png") no-repeat center / cover;
+    background: url("../img/bg_desktop_1.svg") no-repeat top left;
 
     @media all and (max-width: 767px) {
       background: url("../img/mobile_top_bg.png") no-repeat top center/ auto 50%;
+      background: url("../img/bg_mobile_1.svg") no-repeat top center;
     }
   }
 
   .layer2 {
     background: url("../img/top_bg_mid.png") no-repeat center / cover;
+    background: url("../img/bg_desktop_2.svg") no-repeat right bottom;
 
     @media all and (max-width: 767px) {
       display: none !important;
@@ -415,10 +418,12 @@ header {
 
   .layer3 {
     background: url("../img/top_bg_sml.png") no-repeat center / cover;
+    background: url("../img/bg_desktop_3.svg") no-repeat left bottom;
 
     @media all and (max-width: 767px) {
       background: url("../img/mobile_bottom_bg.png") no-repeat bottom center/
         auto 50%;
+      background: url("../img/bg_mobile_2.svg") no-repeat bottom center;
     }
   }
 
@@ -1567,7 +1572,7 @@ footer {
     }
 
     img {
-      height: 29px;
+      height: 35px;
     }
 
     &:hover {
@@ -1595,37 +1600,36 @@ footer {
     pointer-events: none;
   }
 
+  .close {
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    z-index: 1;
+    top: 25px;
+    right: 25px;
+
+    path {
+      fill: #fff;
+      transition: fill 180ms;
+    }
+
+    &:hover {
+      path {
+        fill: $aqua;
+        transition: fill 180ms;
+      }
+    }
+  }
+
   .modal {
     width: 375px;
     padding: 75px 77px 75px 52px;
-    padding-left: 52px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 6px 45px rgba(0, 0, 0, 0.95);
     background: url("../img/modal_bg.jpg") no-repeat center / cover;
-
-    .close {
-      width: 17px;
-      height: 17px;
-      position: absolute;
-      z-index: 1;
-      top: 25px;
-      right: 25px;
-
-      path {
-        fill: #fff;
-        transition: fill 180ms;
-      }
-
-      &:hover {
-        path {
-          fill: $aqua;
-          transition: fill 180ms;
-        }
-      }
-    }
 
     h2 {
       max-width: 235px;
@@ -1647,6 +1651,147 @@ footer {
 
     .close_modal {
       margin-left: 26px;
+    }
+  }
+
+  .modal_form {
+    width: 341px;
+    max-width: calc(100% - 34px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 6px 45px rgba(0, 0, 0, 0.95);
+    background: url("../img/modal_bg.jpg") no-repeat center / cover;
+
+    .form-wrap {
+      padding: 100px 64px 80px;
+  
+      @media all and (max-width: 767px) {
+        padding: 50px 15px;
+      }
+  
+      h2 {
+        span {
+          color: $aqua;
+        }
+      }
+  
+      p {
+        max-width: 374px;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        margin-bottom: 45px;
+      }
+  
+      input {
+        display: block;
+        background: transparent;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+        line-height: 24px;
+        padding-left: 20px;
+        width: 100%;
+        border-bottom: 1px solid #fff;
+        transition: border-bottom 180ms, color 180ms;
+  
+        &:focus,
+        &:invalid {
+          color: $aqua;
+          border-bottom: 1px solid $aqua;
+          transition: border-bottom 180ms, color 180ms;
+        }
+      }
+  
+      .input_wrap {
+        .placeholder {
+          pointer-events: none;
+          color: #ffffff;
+          font-size: 14px;
+          font-weight: 300;
+          position: absolute;
+          left: 20px;
+          top: 2px;
+          white-space: nowrap;
+          opacity: 1;
+          transition: opacity 180ms, top 180ms, color 180ms;
+        }
+  
+        .error {
+          opacity: 0;
+          transition: opacity 180ms;
+          position: absolute;
+          top: 110%;
+          left: 20px;
+          color: $aqua;
+        }
+  
+        & + .input_wrap {
+          margin-top: 40px;
+        }
+  
+        input:focus + .placeholder,
+        .filled + .placeholder,
+        input:invalid + .placeholder {
+          top: 110%;
+          transition: opacity 180ms, top 180ms, color 180ms;
+        }
+  
+        input:invalid {
+          & + .placeholder {
+            opacity: 0;
+            transition: opacity 180ms, top 180ms, color 180ms;
+  
+            & + .error {
+              opacity: 1;
+              transition: opacity 180ms;
+            }
+          }
+        }
+  
+        textarea {
+          margin-bottom: 45px;
+          min-height: 150px;
+          padding: 15px 20px;
+          background: transparent;
+          resize: vertical;
+          width: 100%;
+          height: 161px;
+          border: 1px solid #ffffff;
+          color: #ffffff;
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: 0.8px;
+          line-height: 24px;
+          transition: color 180ms, border 180ms;
+  
+          & + .placeholder {
+            top: 19px;
+          }
+  
+          &:focus {
+            color: $aqua;
+            border: 1px solid $aqua;
+            transition: color 180ms, border 180ms;
+          }
+  
+          &:focus,
+          &.filled {
+            & + .placeholder {
+              top: -20px;
+            }
+          }
+        }
+      }
+  
+      .call_modal {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 }
@@ -1686,7 +1831,11 @@ footer {
     margin-bottom: 20px;
 
     @media all and (max-width: 767px) {
-      padding-left: 15px;
+      padding-left: 0;
+
+      & + p.categories {
+        padding-left: 0;
+      }
     }
   }
 
@@ -1907,7 +2056,7 @@ footer {
     flex-wrap: wrap;
 
     @media all and (max-width: 767px) {
-      padding-left: 15px;
+      padding-left: 0;
       margin-bottom: 10px;
     }
 
@@ -1959,7 +2108,8 @@ footer {
   }
 
   @media all and (max-width: 375px) {
-    padding-left: 15px;
+    padding-left: 60px;
+    padding-top: 35px;
   }
 
   &:before {
@@ -1982,6 +2132,10 @@ footer {
       font-size: 131px;
       left: 10px;
       top: 25px;
+    }
+
+    @media all and (max-width: 375px) {
+      left: 0;
     }
   }
 
@@ -2010,5 +2164,11 @@ footer {
     height: 50px;
     line-height: 48px;
     border-radius: 25px;
+
+    @media all and (max-width: 375px) {
+      width: 250px;
+      height: 45px;
+      line-height: 43px;
+    }
   }
 }

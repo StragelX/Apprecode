@@ -106,7 +106,8 @@ $( document ).ready(function() {
       $('.burger, header .container nav').toggleClass('active');
     });
 
-    $('header .container nav ul li').click(function(){
+    $('header .container nav ul li, .get_in_touch').click(function(){
       $('.burger, header .container nav').removeClass('active');
     })
+
 });
