@@ -1655,8 +1655,10 @@ footer {
   }
 
   .modal_form {
+    max-height: 90vh;
+    overflow: auto;
     width: 341px;
-    max-width: calc(100% - 34px);
+    max-width: calc(100% - 50px);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1666,17 +1668,17 @@ footer {
 
     .form-wrap {
       padding: 100px 64px 80px;
-  
+
       @media all and (max-width: 767px) {
         padding: 50px 15px;
       }
-  
+
       h2 {
         span {
           color: $aqua;
         }
       }
-  
+
       p {
         max-width: 374px;
         color: #ffffff;
@@ -1685,7 +1687,7 @@ footer {
         line-height: 20px;
         margin-bottom: 45px;
       }
-  
+
       input {
         display: block;
         background: transparent;
@@ -1698,7 +1700,7 @@ footer {
         width: 100%;
         border-bottom: 1px solid #fff;
         transition: border-bottom 180ms, color 180ms;
-  
+
         &:focus,
         &:invalid {
           color: $aqua;
@@ -1706,7 +1708,7 @@ footer {
           transition: border-bottom 180ms, color 180ms;
         }
       }
-  
+
       .input_wrap {
         .placeholder {
           pointer-events: none;
@@ -1720,7 +1722,7 @@ footer {
           opacity: 1;
           transition: opacity 180ms, top 180ms, color 180ms;
         }
-  
+
         .error {
           opacity: 0;
           transition: opacity 180ms;
@@ -1729,30 +1731,30 @@ footer {
           left: 20px;
           color: $aqua;
         }
-  
+
         & + .input_wrap {
           margin-top: 40px;
         }
-  
+
         input:focus + .placeholder,
         .filled + .placeholder,
         input:invalid + .placeholder {
           top: 110%;
           transition: opacity 180ms, top 180ms, color 180ms;
         }
-  
+
         input:invalid {
           & + .placeholder {
             opacity: 0;
             transition: opacity 180ms, top 180ms, color 180ms;
-  
+
             & + .error {
               opacity: 1;
               transition: opacity 180ms;
             }
           }
         }
-  
+
         textarea {
           margin-bottom: 45px;
           min-height: 150px;
@@ -1768,17 +1770,17 @@ footer {
           letter-spacing: 0.8px;
           line-height: 24px;
           transition: color 180ms, border 180ms;
-  
+
           & + .placeholder {
             top: 19px;
           }
-  
+
           &:focus {
             color: $aqua;
             border: 1px solid $aqua;
             transition: color 180ms, border 180ms;
           }
-  
+
           &:focus,
           &.filled {
             & + .placeholder {
@@ -1787,10 +1789,12 @@ footer {
           }
         }
       }
-  
-      .call_modal {
+
+      .default_btn {
         margin-left: auto;
         margin-right: auto;
+        width: 100%;
+        max-width: 100%;
       }
     }
   }

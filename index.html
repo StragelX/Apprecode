@@ -47,7 +47,7 @@
         <div data-depth="0.3" class="layer3"></div>
     </div>
 
-    <div class="cookies">
+    <div class="cookies hidden">
         <div class="container">
             <div class="row">
                 <div class="col-m-12 inner">
@@ -123,7 +123,9 @@
                     <li><a href="#contacts">Contacts</a></li>
                 </ul>
     
-                <a href="#contacts" class="default_btn get_in_touch">Get in touch</a>
+                <a href="#contacts" class="xs-hide default_btn get_in_touch">Get in touch</a>
+
+                <button class="s-hide sm-hide m-hide call_modal_form default_btn get_in_touch">Get in touch</button>
 
                 <div class="nav_social_block">
                         <a href="" target="_blank">
@@ -178,7 +180,9 @@
                     DevOps Services. 
                 </h1>
 
-                <a href="#contacts" class="default_btn get_in_touch wow zoomIn" data-wow-delay="1.2s">Get in touch</a>
+                <a href="#contacts" class="default_btn get_in_touch wow zoomIn xs-hide" data-wow-delay="1.2s">Get in touch</a>
+
+                <button class="s-hide sm-hide m-hide call_modal_form default_btn get_in_touch">Get in touch</button>
             </div>
         </div>
 
@@ -553,7 +557,9 @@
                 <h2 class="col-m-6 wow fadeIn" data-wow-offset="50" data-wow-delay="0.7s">Tell us about your project and we’ll get in touch immediately</h2>
             </div>
 
-            <a href="#contacts" class="default_btn get_in_touch wow zoomIn" data-wow-offset="50" data-wow-delay="1s">Get in touch</a>
+            <a href="#contacts" class="xs-hide default_btn get_in_touch wow zoomIn" data-wow-offset="50" data-wow-delay="1s">Get in touch</a>
+
+            <button class="s-hide sm-hide m-hide call_modal_form default_btn get_in_touch">Get in touch</button>
         </div>
     </section>
 
@@ -890,7 +896,7 @@
                 </a>
             </div>
 
-            <div class="col-xs-12 col-s-12 col-sm-7 col-m-7">
+            <div class="xs-hide col-s-12 col-sm-7 col-m-7">
                 <div class="form-wrap wow fadeIn" data-wow-delay="0.5s">
                     <h2>Get in <span>touch</span></h2>
 
@@ -958,7 +964,7 @@
         </div>
     </div>
 
-    <div class="modal_overlay hidden">
+    <div class="modal_overlay hidden" data-modal="form">
         <div class="modal_form">
             <button class="close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"><g><g><g/><g><g><g><path d="M.368 1.282L1.782-.132l14.85 14.85-1.414 1.414z"/></g><g><path d="M1.782 16.132L.368 14.718l14.85-14.85 1.414 1.414z"/></g></g></g></g></g></svg>
@@ -997,7 +1003,7 @@
                     <span class="error">Write your massage</span>
                 </div>
 
-                <button class="default_btn call_modal">Get in touch</button>
+                <button class="default_btn close_modal">Get in touch</button>
             </div>
         </div>
     </div>

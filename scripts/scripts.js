@@ -55,6 +55,11 @@ $( document ).ready(function() {
       $(".modal_overlay").removeClass("hidden");
     })
 
+    $(".call_modal_form").click(function(){
+      $("body").addClass("show_modal");
+      $(".modal_overlay[data-modal='form']").removeClass("hidden");
+    })
+
     $('.close_modal, .close').click(function(){
       $(this).closest(".modal_overlay").addClass("hidden");
       $("body").removeClass("show_modal");
@@ -100,7 +105,12 @@ $( document ).ready(function() {
     });
     // Menu higlight on scroll end
 
-    new WOW().init();
+    wow = new WOW(
+      {
+        mobile: false
+      })
+
+    wow.init();
 
     $('.burger').click(function(){
       $('.burger, header .container nav').toggleClass('active');
