@@ -52,7 +52,7 @@ $( document ).ready(function() {
 
     $(".call_modal").click(function(){
       $("body").addClass("show_modal");
-      $(".modal_overlay").removeClass("hidden");
+      $(".modal_overlay[data-modal='thanks']").removeClass("hidden");
     })
 
     $(".call_modal_form").click(function(){

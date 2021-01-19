@@ -903,7 +903,7 @@ header .container nav {
     max-height: 100vh;
     position: fixed;
     top: 0;
-    padding-top: 150px;
+    padding-top: 100px;
     z-index: 1;
     left: 0;
     right: 0;
@@ -1091,20 +1091,17 @@ header .burger {
 }
 
 .bg .layer1 {
-  background: url("../img/top_bg_big.png") no-repeat center/cover;
-  background: url("../img/bg_desktop_1.svg") no-repeat top left;
+  background: url("../img/bg_desktop_1.svg") no-repeat top left/40%;
 }
 
 @media all and (max-width: 767px) {
   .bg .layer1 {
-    background: url("../img/mobile_top_bg.png") no-repeat top center/auto 50%;
-    background: url("../img/bg_mobile_1.svg") no-repeat top center;
+    background: url("../img/bg_mobile_1.svg") no-repeat top center/100%;
   }
 }
 
 .bg .layer2 {
-  background: url("../img/top_bg_mid.png") no-repeat center/cover;
-  background: url("../img/bg_desktop_2.svg") no-repeat right bottom;
+  background: url("../img/bg_desktop_2.svg") no-repeat right bottom/40%;
 }
 
 @media all and (max-width: 767px) {
@@ -1114,14 +1111,12 @@ header .burger {
 }
 
 .bg .layer3 {
-  background: url("../img/top_bg_sml.png") no-repeat center/cover;
-  background: url("../img/bg_desktop_3.svg") no-repeat left bottom;
+  background: url("../img/bg_desktop_3.svg") no-repeat left bottom/30%;
 }
 
 @media all and (max-width: 767px) {
   .bg .layer3 {
-    background: url("../img/mobile_bottom_bg.png") no-repeat bottom center/auto 50%;
-    background: url("../img/bg_mobile_2.svg") no-repeat bottom center;
+    background: url("../img/bg_mobile_2.svg") no-repeat bottom center/90%;
   }
 }
 
@@ -2192,11 +2187,13 @@ section {
   line-height: 24px;
   padding-left: 20px;
   width: 100%;
+  border-radius: 0;
   border-bottom: 1px solid #fff;
   transition: border-bottom 180ms, color 180ms;
 }
 
 .screen_9 .form-wrap input:focus, .screen_9 .form-wrap input:invalid {
+  border-radius: 0;
   color: #00ffd8;
   border-bottom: 1px solid #00ffd8;
   transition: border-bottom 180ms, color 180ms;
@@ -2246,6 +2243,7 @@ section {
 }
 
 .screen_9 .form-wrap .input_wrap textarea {
+  border-radius: 0;
   margin-bottom: 45px;
   min-height: 150px;
   padding: 15px 20px;
@@ -2407,6 +2405,13 @@ footer a:hover {
   background: url("../img/modal_bg.jpg") no-repeat center/cover;
 }
 
+@media all and (max-width: 376px) {
+  .modal_overlay .modal {
+    max-width: 90%;
+    padding: 50px 20px;
+  }
+}
+
 .modal_overlay .modal h2 {
   max-width: 235px;
   margin-bottom: 12px;
@@ -2448,7 +2453,13 @@ footer a:hover {
 
 @media all and (max-width: 767px) {
   .modal_overlay .modal_form .form-wrap {
-    padding: 50px 15px;
+    padding: 50px 20px;
+  }
+}
+
+@media all and (max-width: 376px) {
+  .modal_overlay .modal_form .form-wrap {
+    max-height: 80vh;
   }
 }
 
@@ -2466,6 +2477,7 @@ footer a:hover {
 }
 
 .modal_overlay .modal_form .form-wrap input {
+  border-radius: 0;
   display: block;
   background: transparent;
   color: #ffffff;
@@ -2529,6 +2541,7 @@ footer a:hover {
 }
 
 .modal_overlay .modal_form .form-wrap .input_wrap textarea {
+  border-radius: 0;
   margin-bottom: 45px;
   min-height: 150px;
   padding: 15px 20px;
@@ -2865,6 +2878,12 @@ footer a:hover {
   line-height: 28px;
   margin-right: 20px;
   margin-bottom: 10px;
+}
+
+@media all and (max-width: 767px) {
+  .blog_page_wrap .categories_wrap .categorie {
+    margin-right: 15px;
+  }
 }
 
 .blog_page_wrap .categories_wrap .categorie.active {
