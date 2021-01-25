@@ -148,7 +148,8 @@ header {
   position: fixed;
   width: 100%;
   box-shadow: 0 6px 45px rgba(0, 0, 0, 0.95);
-  background: $dark url("../img/header_bg.jpg") no-repeat left center;
+  // background: $dark url("../img/header_bg.jpg") no-repeat left center;
+  background: $dark;
 
   @media all and (max-width: 769px) {
     &:after {
@@ -161,8 +162,10 @@ header {
       height: 100%;
       z-index: 2;
       content: "";
-      background: $dark url("../img/header_mobile_bg.jpg") no-repeat left center /
-        auto 100%;
+      // background: $dark url("../img/header_mobile_bg.jpg") no-repeat left center /
+      //   auto 100%;
+
+      background: $dark;
     }
   }
 
@@ -399,7 +402,7 @@ header {
 
   .layer1 {
     // background: url("../img/top_bg_big.png") no-repeat center / cover;
-    background: url("../img/bg_desktop_1.svg") no-repeat top left / 40%; 
+    background: url("../img/bg_desktop_1.svg") no-repeat top left / 40%;
 
     @media all and (max-width: 767px) {
       // background: url("../img/mobile_top_bg.png") no-repeat top center/ auto 50%;
@@ -1630,7 +1633,7 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 6px 45px rgba(0, 0, 0, 0.95);
+    box-shadow: 0 6px 100px #222222;
     background: url("../img/modal_bg.jpg") no-repeat center / cover;
 
     @media all and (max-width: 376px) {
@@ -1648,10 +1651,10 @@ footer {
     }
 
     p {
-      max-width: 186px;
+      max-width: 235px;
       color: #ffffff;
       font-size: 14px;
-      font-weight: 300;
+      font-weight: 600;
       line-height: 20px;
       margin-bottom: 42px;
     }
@@ -1670,7 +1673,7 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 6px 45px rgba(0, 0, 0, 0.95);
+    box-shadow: 0 6px 100px #222222;
     background: url("../img/modal_bg.jpg") no-repeat center / cover;
 
     .form-wrap {
@@ -2192,4 +2195,59 @@ footer {
       line-height: 43px;
     }
   }
+}
+
+// bg styles particles
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles stats.js ---- */
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles {
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }

@@ -9,10 +9,10 @@ $( document ).ready(function() {
       ( $(this) ).val() !="" ? $(this).addClass("filled") : $(this).removeClass("filled");
     })
 
-    var parallaxInstance = new Parallax(document.getElementById('bg'), {
-      scalarX: 2.0,
-      scalarY: 3.5
-    });
+    // var parallaxInstance = new Parallax(document.getElementById('bg'), {
+    //   scalarX: 2.0,
+    //   scalarY: 3.5
+    // });
 
     var reviewSlider = new Swiper('.reviewSlider', {
         loop: true,
