@@ -1634,7 +1634,7 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 6px 100px #222222;
-    background: url("../img/modal_bg.jpg") no-repeat center / cover;
+    background:rgb(7, 11, 18) url("../img/modal_bg_thanks.svg") no-repeat center / cover;
 
     @media all and (max-width: 376px) {
       max-width: 90%;
@@ -1674,7 +1674,7 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 6px 100px #222222;
-    background: url("../img/modal_bg.jpg") no-repeat center / cover;
+    background: rgb(7, 11, 18) url("../img/modal_bg.svg") no-repeat center / cover;
 
     @media all and (max-width: 767px) {
       width: 341px;
@@ -1815,6 +1815,10 @@ footer {
         margin-right: auto;
         width: 100%;
         max-width: 100%;
+        line-height: 38px;
+    text-align: center;
+    width: 220px;
+    height: 40px;
       }
     }
   }
