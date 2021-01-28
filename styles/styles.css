@@ -1697,7 +1697,7 @@ section {
 .screen_3 .aws_wrap.animated::after {
   border-bottom-color: #00ffd8;
   border-left-color: #00ffd8;
-  transition: border-color 0s ease-out 1.5s, width 0.5s ease-out 1.5s, height 0.5s ease-out 2s;
+  transition: border-color 0s ease-out 1.5s, width 0.5s ease-out 1.5s, height 0.5s ease-out 2s;
 }
 
 .screen_3 .aws_wrap .aws {
