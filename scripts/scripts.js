@@ -114,12 +114,12 @@ $( document ).ready(function() {
 
     $('.burger').click(function(){
       $('.burger, header .container nav').toggleClass('active');
-      $("body").addClass("show_modal");
+      $("body").toggleClass("show_modal");
     });
 
     $('header .container nav ul li, .get_in_touch').click(function(){
       $('.burger, header .container nav').removeClass('active');
       $("body").removeClass("show_modal");
-    })
+    });
 
 });
