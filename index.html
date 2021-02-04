@@ -13,9 +13,8 @@
     <script src="scripts/swiper-bundle.min.js"></script>
     <script src="scripts/jquery.maskedinput.js"></script>
     <script src="scripts/wow.min.js"></script>
+    <!-- <script src="scripts/clamp.min.js"></script> -->
     <script src="scripts/scripts.js"></script>
-    
-    
 
     <!-- generics -->
     <link rel="icon" href="/img/favicon/Apprecode_fav-icons_32x32.png" sizes="32x32">
@@ -42,7 +41,6 @@
     <meta name="msapplication-config" content="/path/to/browserconfig.xml" />
 </head>
 <body>
-    <!-- particles.js container -->
     <div id="particles-js"></div>
 
     <div class="cookies hidden">
@@ -163,6 +161,31 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><g><g><g><g><path fill="#fff" d="M12.343 9.055c0 1.991-1.62 3.612-3.612 3.612-1.99 0-3.61-1.62-3.61-3.612 0-1.99 1.62-3.61 3.61-3.61a3.615 3.615 0 0 1 3.612 3.61zm1.312 0a4.93 4.93 0 0 0-4.924-4.924 4.93 4.93 0 0 0-4.924 4.924 4.93 4.93 0 0 0 4.924 4.924 4.929 4.929 0 0 0 4.924-4.924z"/></g></g><g><g><path fill="#fff" d="M14.638 1.505c.938 0 1.701.762 1.701 1.7v11.758c0 .938-.763 1.7-1.7 1.7H2.88c-.938 0-1.701-.762-1.701-1.7V3.205c0-.938.763-1.7 1.7-1.7zm2.868 13.458V3.205A2.87 2.87 0 0 0 14.638.338H2.881A2.87 2.87 0 0 0 .014 3.205v11.758a2.87 2.87 0 0 0 2.867 2.867h11.757a2.87 2.87 0 0 0 2.868-2.867z"/></g></g><g><path fill="#fff" d="M12.187 4.348a1.277 1.277 0 1 1 2.553 0 1.277 1.277 0 0 1-2.553 0z"/></g></g></g></svg>
                         </a>
                 </div>
+            </nav>
+        </div>
+    </header>
+
+    <header style="display: none;">
+        <div class="container">
+            <a href="https://stragelx.github.io/Apprecode/">
+                <img src="img/logo.svg" class="logo" alt="">
+            </a>
+
+            <button class="burger"></button>
+    
+            <nav>
+                <ul>
+                    <li><a href="#about">Сontrol panel</a></li>
+                    <li><a href="#services">Go to the site</a></li>
+                    <li class="df">
+                        <img src="img/user_icon.svg" alt="">
+                        <p>
+                            cm@voroninstudio.eu
+                        </p>
+                    </li>
+                </ul>
+    
+                <button class="default_btn get_in_touch">Log out</button>
             </nav>
         </div>
     </header>
@@ -777,7 +800,10 @@
 
             <a href="blog_page.html" class="blog_link_wrap col-xs-12 col-s-11 col-m-10">
                 <div class="section_date">
-                    <p>Management</p>
+                    <p>
+                        <span>Management</span>
+                        <span>Development</span>
+                    </p>
 
                     <p>10.06.2020</p>
                 </div>
@@ -894,35 +920,37 @@
 
                     <p>Leave information about yourself — and we’ll get back to you soon</p>
 
-                    <div class="input_wrap">
-                        <input type="text" id="name" tabindex="1" class="placer">
-
-                        <span class="placeholder">Full name *</span>
-                        <span class="error">Write your full name</span>
-                    </div>
-
-                    <div class="input_wrap">
-                        <input type="email" id="mail" tabindex="2" class="placer">
-
-                        <span class="placeholder">Email *</span>
-                        <span class="error">Write correct email</span>
-                    </div>
-
-                    <div class="input_wrap">
-                        <input type="tel" id="tel" tabindex="3" class="placer phone">
-
-                        <span class="placeholder">Phone number</span>
-                        <span class="error">Write correct phone number</span>
-                    </div>
-
-                    <div class="input_wrap">
-                        <textarea name="message" class="placer"></textarea>
-
-                        <span class="placeholder">Message</span>
-                        <span class="error">Write your massage</span>
-                    </div>
-
-                    <button class="default_btn call_modal">Get in touch</button>
+                    <form class="form">
+                        <div class="input_wrap">
+                            <input type="text" id="name" name="name" tabindex="1" class="placer">
+    
+                            <span class="placeholder">Full name *</span>
+                            <span class="error">Write your full name</span>
+                        </div>
+    
+                        <div class="input_wrap">
+                            <input type="email" id="mail" name="mail" tabindex="2" class="placer">
+    
+                            <span class="placeholder">Email *</span>
+                            <span class="error">Write correct email</span>
+                        </div>
+    
+                        <div class="input_wrap">
+                            <input type="tel" id="tel" name="phone" tabindex="3" class="placer phone">
+    
+                            <span class="placeholder">Phone number</span>
+                            <span class="error">Write correct phone number</span>
+                        </div>
+    
+                        <div class="input_wrap">
+                            <textarea name="message" name="message" class="placer"></textarea>
+    
+                            <span class="placeholder">Message</span>
+                            <span class="error">Write your massage</span>
+                        </div>
+    
+                        <input type="submit" name="send" value="Get in touch" class="default_btn">
+                    </form>  
                 </div>
             </div>
         </div>
@@ -967,35 +995,144 @@
 
                 <p>Leave information about yourself — and we’ll get back to you soon</p>
 
-                <div class="input_wrap">
-                    <input type="text" id="name" tabindex="1" class="placer">
+                <form class="form">
+                    <div class="input_wrap">
+                        <input type="text" id="name" name="name" tabindex="1" class="placer">
+    
+                        <span class="placeholder">Full name *</span>
+                        <span class="error">Write your full name</span>
+                    </div>
+    
+                    <div class="input_wrap">
+                        <input type="email" id="mail" name="mail" tabindex="2" class="placer">
+    
+                        <span class="placeholder">Email *</span>
+                        <span class="error">Write correct email</span>
+                    </div>
+    
+                    <div class="input_wrap">
+                        <input type="tel" id="tel" name="phone" tabindex="3" class="placer phone">
+    
+                        <span class="placeholder">Phone number</span>
+                        <span class="error">Write correct phone number</span>
+                    </div>
+    
+                    <div class="input_wrap">
+                        <textarea name="message" name="message" class="placer"></textarea>
+    
+                        <span class="placeholder">Message</span>
+                        <span class="error">Write your massage</span>
+                    </div>
+    
+                    <input type="submit" name="send" value="Get in touch" class="default_btn close_modal">
+                </form>
+            </div>
+        </div>
+    </div>
 
-                    <span class="placeholder">Full name *</span>
-                    <span class="error">Write your full name</span>
-                </div>
+    <div class="modal_overlay hidden" data-modal="change_pass">
+        <div class="modal_form">
+            <button class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"><g><g><g/><g><g><g><path d="M.368 1.282L1.782-.132l14.85 14.85-1.414 1.414z"/></g><g><path d="M1.782 16.132L.368 14.718l14.85-14.85 1.414 1.414z"/></g></g></g></g></g></svg>
+            </button>
 
-                <div class="input_wrap">
-                    <input type="email" id="mail" tabindex="2" class="placer">
+            <div class="form-wrap">
+                <h2>Change <span>password</span></h2>
 
-                    <span class="placeholder">Email *</span>
-                    <span class="error">Write correct email</span>
-                </div>
+                <p>Password must be at least 6 characters long</p>
 
-                <div class="input_wrap">
-                    <input type="tel" id="tel" tabindex="3" class="placer phone">
+                <form class="form">
+                    <div class="input_wrap">
+                        <input type="password" id="password" name="password" tabindex="1" class="placer">
+    
+                        <span class="placeholder">New password *</span>
+                        <span class="error">Write correct password</span>
+                    </div>
+    
+                    <div class="input_wrap">
+                        <input type="password" id="password_confirm" name="password_confirm" tabindex="2" class="placer">
+    
+                        <span class="placeholder">Confirm new password *</span>
+                        <span class="error">Write correct passwordl</span>
+                    </div>
 
-                    <span class="placeholder">Phone number</span>
-                    <span class="error">Write correct phone number</span>
-                </div>
+                    <p class="error">Password reset link is invalid</p>
+    
+                    <input type="submit" name="send" value="Change password" class="default_btn close_modal">
 
-                <div class="input_wrap">
-                    <textarea name="message" class="placer"></textarea>
+                    <button class="link">Log in</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
-                    <span class="placeholder">Message</span>
-                    <span class="error">Write your massage</span>
-                </div>
+    <div class="modal_overlay hidden" data-modal="forgot_pass">
+        <div class="modal_form">
+            <button class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"><g><g><g/><g><g><g><path d="M.368 1.282L1.782-.132l14.85 14.85-1.414 1.414z"/></g><g><path d="M1.782 16.132L.368 14.718l14.85-14.85 1.414 1.414z"/></g></g></g></g></g></svg>
+            </button>
 
-                <button class="default_btn close_modal call_modal">Get in touch</button>
+            <div class="form-wrap">
+                <h2>Forgot <span>password</span>?</h2>
+
+                <p>Send me reset password instruction</p>
+
+                <form class="form">
+                    <div class="input_wrap">
+                        <input type="email" id="email" name="email" tabindex="1" class="placer">
+    
+                        <span class="placeholder">Write email *</span>
+                        <span class="error">Write correct email *</span>
+                    </div>
+
+                    <p class="error">No such mailbox found</p>
+    
+                    <input type="submit" name="send" value="Send" class="default_btn close_modal">
+
+                    <button class="link">Log in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal_overlay hidden" data-modal="login">
+        <div class="modal_form">
+            <button class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"><g><g><g/><g><g><g><path d="M.368 1.282L1.782-.132l14.85 14.85-1.414 1.414z"/></g><g><path d="M1.782 16.132L.368 14.718l14.85-14.85 1.414 1.414z"/></g></g></g></g></g></svg>
+            </button>
+
+            <div class="form-wrap">
+                <h2>log  <span>in</span></h2>
+
+                <p>Send me reset password instruction</p>
+
+                <form class="form">
+                    <div class="input_wrap">
+                        <input type="email" id="email" name="email" tabindex="1" class="placer">
+    
+                        <span class="placeholder">Write email *</span>
+                        <span class="error">Write correct email *</span>
+                    </div>
+
+                    <div class="input_wrap">
+                        <input type="password" id="password" name="password" tabindex="1" class="placer">
+    
+                        <span class="placeholder">Write password *</span>
+                        <span class="error">Write correct password *</span>
+                    </div>
+
+                    <label for="remember" class="checkbox">
+                        <input type="checkbox" id="remember" name="remember">
+
+                        <span></span>
+
+                        <p>Remember me</p>
+                    </label>
+
+                    <input type="submit" name="send" value="Send" class="default_btn close_modal">
+
+                    <button class="link">Forgot password?</button>
+                </form>
             </div>
         </div>
     </div>

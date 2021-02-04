@@ -1,6 +1,13 @@
 $( document ).ready(function() {
+
+    var apprecode_cookies = localStorage.getItem('apprecode_cookies');
+    if (apprecode_cookies != 'checked') {
+      $(".cookies").removeClass('hidden');
+    }
+
     $(".cookies .ok_btn").click(function(){
         $(this).closest(".cookies").addClass("hidden");
+        localStorage.setItem('apprecode_cookies', 'checked')
     })
 
     $(".phone").mask("+38(099) 999 99 99");
@@ -67,7 +74,15 @@ $( document ).ready(function() {
 
     $('.categorie').click(function(){
       $(this).addClass('active').siblings('.categorie').removeClass('active');
+      var cat = $(this).attr("data-id").toString();
       
+      $(".category_filter").each(function(){
+        if( $(this).attr("data-id").indexOf(cat) > -1) {
+          $(this).show();
+        }else {
+          $(this).hide();
+        }
+      })
     })
 
     $('header .container nav ul li').click(function(){
@@ -122,4 +137,17 @@ $( document ).ready(function() {
       $("body").removeClass("show_modal");
     });
 
+    $(".form").on("submit", function(){
+      $.ajax({
+        url: '/contact_request',
+        method: 'post',
+        dataType: 'html',
+        data: $(this).serialize(),
+        success: function(data){
+          $(".form")[0].reset();
+        }
+      });
+    });
+
+    // $clamp($('.screen_3 .service p'), {clamp: 4, useNativeClamp: false, animate: true});
 });

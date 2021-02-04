@@ -705,6 +705,11 @@ body.show_modal {
   overflow-y: hidden;
 }
 
+.df {
+  display: flex;
+  align-items: center;
+}
+
 h1 {
   color: #fff;
   font-size: 65px;
@@ -988,6 +993,11 @@ header .container nav ul li + li {
     margin-left: 0;
     margin-top: 30px;
   }
+}
+
+header .container nav ul li img {
+  margin-right: 13px;
+  height: 18px;
 }
 
 header .container .get_in_touch {
@@ -1649,7 +1659,7 @@ section {
 .screen_3 .aws_wrap.animated::after {
   border-bottom-color: #00ffd8;
   border-left-color: #00ffd8;
-  transition: border-color 0s ease-out 1.5s, width 0.5s ease-out 1.5s, height 0.5s ease-out 2s;
+  transition: border-color 0s ease-out 1.5s, width 0.5s ease-out 1.5s, height 0.5s ease-out 2s;
 }
 
 .screen_3 .aws_wrap .aws {
@@ -1979,7 +1989,18 @@ section {
   margin-bottom: 18px;
 }
 
-.blog_link_wrap .section_date p {
+.blog_link_wrap .section_date a {
+  pointer-events: all;
+}
+
+.blog_link_wrap .section_date a:not(:last-child),
+.blog_link_wrap .section_date span:not(:last-child) {
+  padding-right: 5px;
+  border-right: 1px solid #fff;
+}
+
+.blog_link_wrap .section_date p,
+.blog_link_wrap .section_date a {
   color: #ffffff;
   font-size: 16px;
   font-weight: 600;
@@ -1988,7 +2009,8 @@ section {
 }
 
 @media all and (max-width: 767px) {
-  .blog_link_wrap .section_date p {
+  .blog_link_wrap .section_date p,
+  .blog_link_wrap .section_date a {
     font-size: 12px;
     letter-spacing: 0.6px;
   }
@@ -2139,7 +2161,7 @@ section {
   margin-bottom: 45px;
 }
 
-.screen_9 .form-wrap input {
+.screen_9 .form-wrap .input_wrap input {
   display: block;
   background: transparent;
   color: #ffffff;
@@ -2154,7 +2176,7 @@ section {
   transition: border-bottom 180ms, color 180ms;
 }
 
-.screen_9 .form-wrap input:focus, .screen_9 .form-wrap input:invalid {
+.screen_9 .form-wrap .input_wrap input:focus, .screen_9 .form-wrap .input_wrap input:invalid {
   border-radius: 0;
   color: #00ffd8;
   border-bottom: 1px solid #00ffd8;
@@ -2206,7 +2228,6 @@ section {
 
 .screen_9 .form-wrap .input_wrap textarea {
   border-radius: 0;
-  margin-bottom: 45px;
   min-height: 150px;
   padding: 15px 20px;
   background: transparent;
@@ -2236,7 +2257,8 @@ section {
   top: -20px;
 }
 
-.screen_9 .form-wrap .call_modal {
+.screen_9 .form-wrap .default_btn {
+  margin-top: 45px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2330,6 +2352,15 @@ footer a:hover {
   opacity: 1;
   transition: opacity 360ms;
   pointer-events: all;
+}
+
+.modal_overlay[data-modal="change_pass"] .modal_form, .modal_overlay[data-modal="forgot_pass"] .modal_form, .modal_overlay[data-modal="login"] .modal_form {
+  width: 375px;
+  background: #070b12;
+}
+
+.modal_overlay[data-modal="change_pass"] .modal_form .form-wrap, .modal_overlay[data-modal="forgot_pass"] .modal_form .form-wrap, .modal_overlay[data-modal="login"] .modal_form .form-wrap {
+  padding: 75px 35px 50px;
 }
 
 .modal_overlay.hidden {
@@ -2445,7 +2476,25 @@ footer a:hover {
   margin-bottom: 45px;
 }
 
-.modal_overlay .modal_form .form-wrap input {
+.modal_overlay .modal_form .form-wrap p.error {
+  margin-top: 30px;
+  margin-bottom: -40px;
+  display: block;
+  text-align: center;
+  color: #f00;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  opacity: 1;
+  transition: opacity 180ms;
+}
+
+.modal_overlay .modal_form .form-wrap p.error.hidden {
+  opacity: 0;
+  transition: opacity 180ms;
+}
+
+.modal_overlay .modal_form .form-wrap .input_wrap input {
   border-radius: 0;
   display: block;
   background: transparent;
@@ -2460,7 +2509,7 @@ footer a:hover {
   transition: border-bottom 180ms, color 180ms;
 }
 
-.modal_overlay .modal_form .form-wrap input:focus, .modal_overlay .modal_form .form-wrap input:invalid {
+.modal_overlay .modal_form .form-wrap .input_wrap input:focus, .modal_overlay .modal_form .form-wrap .input_wrap input:invalid {
   color: #00ffd8;
   border-bottom: 1px solid #00ffd8;
   transition: border-bottom 180ms, color 180ms;
@@ -2511,7 +2560,6 @@ footer a:hover {
 
 .modal_overlay .modal_form .form-wrap .input_wrap textarea {
   border-radius: 0;
-  margin-bottom: 45px;
   min-height: 150px;
   padding: 15px 20px;
   background: transparent;
@@ -2550,6 +2598,52 @@ footer a:hover {
   text-align: center;
   width: 220px;
   height: 40px;
+  margin-top: 45px;
+}
+
+.modal_overlay .link {
+  display: block;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  text-decoration: underline;
+}
+
+.modal_overlay .link:hover {
+  text-decoration: none;
+}
+
+.modal_overlay .checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.modal_overlay .checkbox input {
+  display: none;
+}
+
+.modal_overlay .checkbox input:checked + span {
+  background: url("../img/checked_icon.svg") no-repeat center/80%;
+}
+
+.modal_overlay .checkbox span {
+  margin-right: 20px;
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  border: 1px solid #fff;
+}
+
+.modal_overlay .checkbox p {
+  cursor: pointer;
+  margin-bottom: 0 !important;
 }
 
 .privecy_wrap {
@@ -2671,6 +2765,16 @@ footer a:hover {
   margin-bottom: 33px;
 }
 
+.blog_page_wrap .section_date a {
+  pointer-events: all;
+}
+
+.blog_page_wrap .section_date a:not(:last-child),
+.blog_page_wrap .section_date span:not(:last-child) {
+  padding-right: 5px;
+  border-right: 1px solid #fff;
+}
+
 @media all and (max-width: 767px) {
   .blog_page_wrap .section_date {
     margin-bottom: 15px;
@@ -2680,7 +2784,8 @@ footer a:hover {
   }
 }
 
-.blog_page_wrap .section_date p {
+.blog_page_wrap .section_date p,
+.blog_page_wrap .section_date a {
   color: #ffffff;
   font-size: 16px;
   font-weight: 600;
@@ -2689,7 +2794,8 @@ footer a:hover {
 }
 
 @media all and (max-width: 767px) {
-  .blog_page_wrap .section_date p {
+  .blog_page_wrap .section_date p,
+  .blog_page_wrap .section_date a {
     font-size: 12px;
     letter-spacing: 0.6px;
   }

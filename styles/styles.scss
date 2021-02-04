@@ -14,6 +14,11 @@ body {
   }
 }
 
+.df {
+  display: flex;
+  align-items: center;
+}
+
 h1 {
   color: #fff;
   font-size: 65px;
@@ -286,6 +291,11 @@ header {
               margin-left: 0;
               margin-top: 30px;
             }
+          }
+
+          img {
+            margin-right: 13px;
+            height: 18px;
           }
         }
       }
@@ -1224,7 +1234,18 @@ section {
     justify-content: space-between;
     margin-bottom: 18px;
 
-    p {
+    a {
+      pointer-events: all;
+    }
+
+    a:not(:last-child),
+    span:not(:last-child) {
+      padding-right: 5px;
+      border-right: 1px solid #fff;
+    }
+
+    p,
+    a {
       color: #ffffff;
       font-size: 16px;
       font-weight: 600;
@@ -1368,30 +1389,30 @@ section {
       margin-bottom: 45px;
     }
 
-    input {
-      display: block;
-      background: transparent;
-      color: #ffffff;
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: 0.8px;
-      line-height: 24px;
-      padding-left: 20px;
-      width: 100%;
-      border-radius: 0;
-      border-bottom: 1px solid #fff;
-      transition: border-bottom 180ms, color 180ms;
-
-      &:focus,
-      &:invalid {
-        border-radius: 0;
-        color: $aqua;
-        border-bottom: 1px solid $aqua;
-        transition: border-bottom 180ms, color 180ms;
-      }
-    }
-
     .input_wrap {
+      input {
+        display: block;
+        background: transparent;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+        line-height: 24px;
+        padding-left: 20px;
+        width: 100%;
+        border-radius: 0;
+        border-bottom: 1px solid #fff;
+        transition: border-bottom 180ms, color 180ms;
+
+        &:focus,
+        &:invalid {
+          border-radius: 0;
+          color: $aqua;
+          border-bottom: 1px solid $aqua;
+          transition: border-bottom 180ms, color 180ms;
+        }
+      }
+
       .placeholder {
         pointer-events: none;
         color: #ffffff;
@@ -1439,7 +1460,6 @@ section {
 
       textarea {
         border-radius: 0;
-        margin-bottom: 45px;
         min-height: 150px;
         padding: 15px 20px;
         background: transparent;
@@ -1473,7 +1493,8 @@ section {
       }
     }
 
-    .call_modal {
+    .default_btn {
+      margin-top: 45px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -1560,6 +1581,19 @@ footer {
   opacity: 1;
   transition: opacity 360ms;
   pointer-events: all;
+
+  &[data-modal="change_pass"],
+  &[data-modal="forgot_pass"],
+  &[data-modal="login"] {
+    .modal_form {
+      width: 375px;
+      background: rgb(7, 11, 18);
+
+      .form-wrap {
+        padding: 75px 35px 50px;
+      }
+    }
+  }
 
   &.hidden {
     opacity: 0;
@@ -1668,31 +1702,49 @@ footer {
         font-weight: 300;
         line-height: 20px;
         margin-bottom: 45px;
-      }
 
-      input {
-        border-radius: 0;
-        display: block;
-        background: transparent;
-        color: #ffffff;
-        font-size: 16px;
-        font-weight: 600;
-        letter-spacing: 0.8px;
-        line-height: 24px;
-        padding-left: 20px;
-        width: 100%;
-        border-bottom: 1px solid #fff;
-        transition: border-bottom 180ms, color 180ms;
+        &.error {
+          margin-top: 30px;
+          margin-bottom: -40px;
+          display: block;
+          text-align: center;
+          color: #f00;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 0.6px;
+          opacity: 1;
+          transition: opacity 180ms;
 
-        &:focus,
-        &:invalid {
-          color: $aqua;
-          border-bottom: 1px solid $aqua;
-          transition: border-bottom 180ms, color 180ms;
+          &.hidden {
+            opacity: 0;
+            transition: opacity 180ms;
+          }
         }
       }
 
       .input_wrap {
+        input {
+          border-radius: 0;
+          display: block;
+          background: transparent;
+          color: #ffffff;
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: 0.8px;
+          line-height: 24px;
+          padding-left: 20px;
+          width: 100%;
+          border-bottom: 1px solid #fff;
+          transition: border-bottom 180ms, color 180ms;
+
+          &:focus,
+          &:invalid {
+            color: $aqua;
+            border-bottom: 1px solid $aqua;
+            transition: border-bottom 180ms, color 180ms;
+          }
+        }
+
         .placeholder {
           pointer-events: none;
           color: #ffffff;
@@ -1740,7 +1792,6 @@ footer {
 
         textarea {
           border-radius: 0;
-          margin-bottom: 45px;
           min-height: 150px;
           padding: 15px 20px;
           background: transparent;
@@ -1783,7 +1834,53 @@ footer {
         text-align: center;
         width: 220px;
         height: 40px;
+        margin-top: 45px;
       }
+    }
+  }
+
+  .link {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    padding-left: 20px;
+    cursor: pointer;
+
+    input {
+      display: none;
+
+      &:checked + span {
+        background: url("../img/checked_icon.svg") no-repeat center / 80%;
+      }
+    }
+
+    span {
+      margin-right: 20px;
+      width: 22px;
+      height: 22px;
+      border-radius: 3px;
+      border: 1px solid #fff;
+    }
+
+    p {
+      cursor: pointer;
+      margin-bottom: 0 !important;
     }
   }
 }
@@ -1900,6 +1997,16 @@ footer {
     justify-content: space-between;
     margin-bottom: 33px;
 
+    a {
+      pointer-events: all;
+    }
+
+    a:not(:last-child),
+    span:not(:last-child) {
+      padding-right: 5px;
+      border-right: 1px solid #fff;
+    }
+
     @media all and (max-width: 767px) {
       margin-bottom: 15px;
 
@@ -1908,7 +2015,8 @@ footer {
       }
     }
 
-    p {
+    p,
+    a {
       color: #ffffff;
       font-size: 16px;
       font-weight: 600;
