@@ -148,6 +148,4 @@ $( document ).ready(function() {
         }
       });
     });
-
-    // $clamp($('.screen_3 .service p'), {clamp: 4, useNativeClamp: false, animate: true});
 });
