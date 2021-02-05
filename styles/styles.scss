@@ -210,10 +210,11 @@ header {
       background: #070b12;
 
       @media all and (max-width: 769px) {
+        overflow-x: scroll;
         max-height: 100vh;
         position: fixed;
         top: 0;
-        padding-top: 100px;
+        padding-top: 130px;
         z-index: 1;
         left: 0;
         right: 0;
