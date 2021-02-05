@@ -148,4 +148,20 @@ $( document ).ready(function() {
         }
       });
     });
+
+    // category_filter
+
+    $(function () {
+      $(".category_filter").slice(0, 10).show();
+      $("#loadMore").on('click', function (e) {
+          e.preventDefault();
+          $(".category_filter:hidden").slice(0, 4).slideDown();
+          if ($(".category_filter:hidden").length == 0) {
+              $("#load").fadeOut('slow');
+          }
+          $('html,body').animate({
+              scrollTop: $(this).offset().top
+          }, 1500);
+      });
+  });
 });
