@@ -157,7 +157,7 @@ $( document ).ready(function() {
           e.preventDefault();
           $(".category_filter:hidden").slice(0, 4).slideDown();
           if ($(".category_filter:hidden").length == 0) {
-              $("#load").fadeOut('slow');
+              $("#loadMore").fadeOut('slow');
           }
           $('html,body').animate({
               scrollTop: $(this).offset().top
