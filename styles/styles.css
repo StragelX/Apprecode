@@ -2177,7 +2177,7 @@ section {
   transition: border-bottom 180ms, color 180ms;
 }
 
-.screen_9 .form-wrap .input_wrap input:focus, .screen_9 .form-wrap .input_wrap input:invalid {
+.screen_9 .form-wrap .input_wrap input:focus, .screen_9 .form-wrap .input_wrap input.invalid {
   border-radius: 0;
   color: #00ffd8;
   border-bottom: 1px solid #00ffd8;
@@ -2212,17 +2212,17 @@ section {
 
 .screen_9 .form-wrap .input_wrap input:focus + .placeholder,
 .screen_9 .form-wrap .input_wrap .filled + .placeholder,
-.screen_9 .form-wrap .input_wrap input:invalid + .placeholder {
+.screen_9 .form-wrap .input_wrap input.invalid + .placeholder {
   top: 110%;
   transition: opacity 180ms, top 180ms, color 180ms;
 }
 
-.screen_9 .form-wrap .input_wrap input:invalid + .placeholder {
+.screen_9 .form-wrap .input_wrap input.invalid + .placeholder {
   opacity: 0;
   transition: opacity 180ms, top 180ms, color 180ms;
 }
 
-.screen_9 .form-wrap .input_wrap input:invalid + .placeholder + .error {
+.screen_9 .form-wrap .input_wrap input.invalid + .placeholder + .error {
   opacity: 1;
   transition: opacity 180ms;
 }
@@ -2510,7 +2510,11 @@ footer a:hover {
   transition: border-bottom 180ms, color 180ms;
 }
 
-.modal_overlay .modal_form .form-wrap .input_wrap input:focus, .modal_overlay .modal_form .form-wrap .input_wrap input:invalid {
+.modal_overlay .modal_form .form-wrap .input_wrap input.touched {
+  outline: 1px solid red;
+}
+
+.modal_overlay .modal_form .form-wrap .input_wrap input:focus, .modal_overlay .modal_form .form-wrap .input_wrap input.invalid {
   color: #00ffd8;
   border-bottom: 1px solid #00ffd8;
   transition: border-bottom 180ms, color 180ms;
@@ -2544,17 +2548,17 @@ footer a:hover {
 
 .modal_overlay .modal_form .form-wrap .input_wrap input:focus + .placeholder,
 .modal_overlay .modal_form .form-wrap .input_wrap .filled + .placeholder,
-.modal_overlay .modal_form .form-wrap .input_wrap input:invalid + .placeholder {
+.modal_overlay .modal_form .form-wrap .input_wrap input.invalid + .placeholder {
   top: 110%;
   transition: opacity 180ms, top 180ms, color 180ms;
 }
 
-.modal_overlay .modal_form .form-wrap .input_wrap input:invalid + .placeholder {
+.modal_overlay .modal_form .form-wrap .input_wrap input.invalid + .placeholder {
   opacity: 0;
   transition: opacity 180ms, top 180ms, color 180ms;
 }
 
-.modal_overlay .modal_form .form-wrap .input_wrap input:invalid + .placeholder + .error {
+.modal_overlay .modal_form .form-wrap .input_wrap input.invalid + .placeholder + .error {
   opacity: 1;
   transition: opacity 180ms;
 }

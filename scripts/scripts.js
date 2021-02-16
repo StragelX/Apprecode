@@ -17,11 +17,6 @@ $( document ).ready(function() {
       ( $(this) ).val() !="" ? $(this).addClass("filled") : $(this).removeClass("filled");
     })
 
-    // var parallaxInstance = new Parallax(document.getElementById('bg'), {
-    //   scalarX: 2.0,
-    //   scalarY: 3.5
-    // });
-
     var reviewSlider = new Swiper('.reviewSlider', {
         loop: true,
         spaceBetween: 30,
@@ -173,5 +168,12 @@ $( document ).ready(function() {
               scrollTop: $(this).offset().top
           }, 1500);
       });
-  });
+    });
+
+    $(".form-wrap input").blur(function(){
+      $(this).removeClass('invalid');
+      if( $(this).val() == '' ) {
+        $(this).addClass('invalid');
+      }
+    });
 });

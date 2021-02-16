@@ -1406,7 +1406,7 @@ section {
         transition: border-bottom 180ms, color 180ms;
 
         &:focus,
-        &:invalid {
+        &.invalid {
           border-radius: 0;
           color: $aqua;
           border-bottom: 1px solid $aqua;
@@ -1442,12 +1442,12 @@ section {
 
       input:focus + .placeholder,
       .filled + .placeholder,
-      input:invalid + .placeholder {
+      input.invalid + .placeholder {
         top: 110%;
         transition: opacity 180ms, top 180ms, color 180ms;
       }
 
-      input:invalid {
+      input.invalid {
         & + .placeholder {
           opacity: 0;
           transition: opacity 180ms, top 180ms, color 180ms;
@@ -1739,7 +1739,7 @@ footer {
           transition: border-bottom 180ms, color 180ms;
 
           &:focus,
-          &:invalid {
+          &.invalid {
             color: $aqua;
             border-bottom: 1px solid $aqua;
             transition: border-bottom 180ms, color 180ms;
@@ -1774,12 +1774,12 @@ footer {
 
         input:focus + .placeholder,
         .filled + .placeholder,
-        input:invalid + .placeholder {
+        input.invalid + .placeholder {
           top: 110%;
           transition: opacity 180ms, top 180ms, color 180ms;
         }
 
-        input:invalid {
+        input.invalid {
           & + .placeholder {
             opacity: 0;
             transition: opacity 180ms, top 180ms, color 180ms;
