@@ -172,7 +172,7 @@ $( document ).ready(function() {
 
     $(".form-wrap input").blur(function(){
       $(this).removeClass('invalid');
-      if( $(this).val() == '' ) {
+      if( $(this).val() == '' || $(this).is(":invalid")) {
         $(this).addClass('invalid');
       }
     });
