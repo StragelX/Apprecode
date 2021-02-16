@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+    var isHomePage = $('.screen_1.container').length > 0
 
     var apprecode_cookies = localStorage.getItem('apprecode_cookies');
     if (apprecode_cookies != 'checked') {
@@ -25,7 +26,7 @@ $( document ).ready(function() {
         loop: true,
         spaceBetween: 30,
         slidesPerView: 3,
-      
+
         navigation: {
           nextEl: '.review_next',
           prevEl: '.review_prev',
@@ -50,7 +51,7 @@ $( document ).ready(function() {
       loop: true,
       spaceBetween: 0,
       slidesPerView: 1,
-    
+
       navigation: {
         nextEl: '.sponsors_next',
         prevEl: '.sponsors_prev',
@@ -64,7 +65,7 @@ $( document ).ready(function() {
 
     $(".call_modal_form").click(function(){
       $("body").addClass("show_modal");
-      $(".modal_overlay[data-modal='form']").removeClass("hidden");
+      $(".modal_overlay[data-modal='contact_form']").removeClass("hidden");
     })
 
     $('.close_modal, .close').click(function(){
@@ -75,7 +76,7 @@ $( document ).ready(function() {
     $('.categorie').click(function(){
       $(this).addClass('active').siblings('.categorie').removeClass('active');
       var cat = $(this).attr("data-id").toString();
-      
+
       $(".category_filter").each(function(){
         if( $(this).attr("data-id").indexOf(cat) > -1) {
           $(this).show();
@@ -91,15 +92,18 @@ $( document ).ready(function() {
 
     // Menu higlight on scroll start
     // Cache selectors
-    var topMenu = $("header .container nav ul"),
-    topMenuHeight = topMenu.outerHeight()+15,
+    var topMenu = $("header .container nav ul")
+    var topMenuHeight = topMenu.outerHeight()+15
+
     // All list items
-    menuItems = topMenu.find("a"),
+    var menuItems = topMenu.find("a")
+
     // Anchors corresponding to menu items
-    scrollItems = menuItems.map(function(){
-      var item = $($(this).attr("href"));
+    var scrollItems = isHomePage ? menuItems.map(function(){
+      var item = $($(this).attr("data-anchor"));
       if (item.length) { return item; }
-    });
+    }) : []
+
     // Bind to scroll
     $(window).scroll(function(){
     // Get container scroll position
@@ -137,16 +141,22 @@ $( document ).ready(function() {
       $("body").removeClass("show_modal");
     });
 
-    $(".form").on("submit", function(){
+    $(".ajax-form").on("submit", function(e){
+      e.preventDefault()
+      var $form = $(this)
+
       $.ajax({
-        url: '/contact_request',
-        method: 'post',
-        dataType: 'html',
-        data: $(this).serialize(),
+        url: $form.data('action'),
+        method: $form.data('method'),
+        dataType: 'json',
+        data: $(this).serializeArray(),
         success: function(data){
-          $(".form")[0].reset();
+          $form[0].reset();
         }
       });
+
+      $(".modal_overlay[data-modal='contact_form']").addClass('hidden')
+      $(".modal_overlay[data-modal='thanks']").removeClass("hidden");
     });
 
     // category_filter

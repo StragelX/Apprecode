@@ -913,30 +913,30 @@
 
                     <p>Leave information about yourself — and we’ll get back to you soon</p>
 
-                    <form class="form">
+                    <form class="form ajax-form" data-action="/contact_request" data-method="post">
                         <div class="input_wrap">
-                            <input type="text" id="name" name="name" tabindex="1" class="placer">
+                            <input required type="text" id="name" name="contact_request[name]" tabindex="1" class="placer">
 
                             <span class="placeholder">Full name *</span>
                             <span class="error">Write your full name</span>
                         </div>
 
                         <div class="input_wrap">
-                            <input type="email" id="mail" name="mail" tabindex="2" class="placer">
+                            <input required type="email" id="mail" name="contact_request[email]" tabindex="2" class="placer">
 
                             <span class="placeholder">Email *</span>
                             <span class="error">Write correct email</span>
                         </div>
 
                         <div class="input_wrap">
-                            <input type="tel" id="tel" name="phone" tabindex="3" class="placer phone">
+                            <input required type="tel" id="tel" name="contact_request[phone]" tabindex="3" class="placer phone">
 
-                            <span class="placeholder">Phone number</span>
+                            <span class="placeholder">Phone number *</span>
                             <span class="error">Write correct phone number</span>
                         </div>
 
                         <div class="input_wrap">
-                            <textarea name="message" name="message" class="placer"></textarea>
+                            <textarea name="contact_request[comment]" class="placer"></textarea>
 
                             <span class="placeholder">Message</span>
                             <span class="error">Write your massage</span>
@@ -977,7 +977,7 @@
         </div>
     </div>
 
-    <div class="modal_overlay hidden" data-modal="form">
+    <div class="modal_overlay hidden" data-modal="contact_form">
         <div class="modal_form">
             <button class="close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"><g><g><g/><g><g><g><path d="M.368 1.282L1.782-.132l14.85 14.85-1.414 1.414z"/></g><g><path d="M1.782 16.132L.368 14.718l14.85-14.85 1.414 1.414z"/></g></g></g></g></g></svg>
@@ -988,36 +988,36 @@
 
                 <p>Leave information about yourself — and we’ll get back to you soon</p>
 
-                <form class="form">
+                <form class="form ajax-form" data-action="/contact_request" data-method="post">
                     <div class="input_wrap">
-                        <input type="text" id="name" name="name" tabindex="1" class="placer">
+                        <input required type="text" id="name" name="contact_request[name]" tabindex="1" class="placer">
 
                         <span class="placeholder">Full name *</span>
                         <span class="error">Write your full name</span>
                     </div>
 
                     <div class="input_wrap">
-                        <input type="email" id="mail" name="mail" tabindex="2" class="placer">
+                        <input required type="email" id="mail" name="contact_request[email]" tabindex="2" class="placer">
 
                         <span class="placeholder">Email *</span>
                         <span class="error">Write correct email</span>
                     </div>
 
                     <div class="input_wrap">
-                        <input type="tel" id="tel" name="phone" tabindex="3" class="placer phone">
+                        <input required type="tel" id="tel" name="contact_request[phone]" tabindex="3" class="placer phone">
 
-                        <span class="placeholder">Phone number</span>
+                        <span class="placeholder">Phone number *</span>
                         <span class="error">Write correct phone number</span>
                     </div>
 
                     <div class="input_wrap">
-                        <textarea name="message" name="message" class="placer"></textarea>
+                        <textarea name="contact_request[comment]" class="placer"></textarea>
 
                         <span class="placeholder">Message</span>
                         <span class="error">Write your massage</span>
                     </div>
 
-                    <input type="submit" name="send" value="Get in touch" class="default_btn close_modal">
+                    <input type="submit" name="send" value="Get in touch" class="default_btn">
                 </form>
             </div>
         </div>
